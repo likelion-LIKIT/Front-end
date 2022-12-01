@@ -1,0 +1,47 @@
+/* 작성자 : 이수화 */
+
+.Header {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    font-weight: 600;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
+}
+
+.headerLogo, .headerInfo , .headerNav {
+    display: flex;
+    align-items: center;
+}
+
+.headerLogo, .headerInfo {
+    width: 20%;
+    justify-content: center;
+}
+
+.headerNav {
+    width: 60%;
+    justify-content: space-around;
+    padding: 0 10%;
+}
+
+.headerNav div {
+    transition: all 0.1s linear;
+}
+
+.headerNav div:hover {
+    color: #F5B100;
+    border-bottom: 2px solid #F5B100;
+}
+
+.headerLogo {
+    font-size: 30px;
+}
+
+.headerInfo > div:nth-child(1) {
+    margin-right: 5%;
+}
+
+#link {
+    padding: 10px;
+    cursor: pointer;
+}
