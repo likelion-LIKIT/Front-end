@@ -1,0 +1,9 @@
+/* 작성자: 구현우 */
+
+#LoginPage {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: fixed;
+}

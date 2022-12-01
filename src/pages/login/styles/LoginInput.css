@@ -1,0 +1,35 @@
+/* 작성자: 구현우 */
+
+#LoginInput {
+    width: 100%;
+    margin: 20px 0 150px 0;
+}
+
+#LoginInput > div {
+    margin: 10px 0;
+}
+
+#LoginInput > div > div {
+    color: white;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.init_login_id, .init_login_pw{
+    width: 285px;
+    padding: 0;
+    border: none;
+    outline: none;
+    height: 35px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding-left: 15px;
+    font-size: 15px;
+    color: white;
+    transition: linear all 0.2s;
+}
+
+.login_id, .login_pw {
+    background-color: white;
+    color: black;
+}

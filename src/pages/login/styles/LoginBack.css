@@ -1,0 +1,40 @@
+/* 작성자: 구현우 */
+
+#LoginBack {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+}
+
+#LoginBack > img {
+    height: 100%;
+}
+
+.gradation_box {
+    width: 120vh;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.6), black);
+}
+
+.loginInitBack {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: black;
+    opacity: 1;
+    transition: linear all 0.8s;
+}
+
+.loginGradation {
+    opacity: 0;
+    transition: linear all 0.5s;
+}
+
+.mainGradation{
+    opacity: 1;
+    background-color: white;
+}
