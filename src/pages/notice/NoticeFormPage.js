@@ -1,4 +1,4 @@
-import '../../styles/pages/notice/NoticeFormPage.css';
+// import '../../styles/pages/notice/NoticeFormPage.css';
 
 const NoticeFormPage = () => {
   return (
