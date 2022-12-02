@@ -26,12 +26,11 @@
     top: 0;
     background-color: black;
     opacity: 1;
-    transition: linear all 0.8s;
+    transition: linear all 0.5s;
 }
 
 .loginGradation {
     opacity: 0;
-    transition: linear all 0.5s;
 }
 
 .mainGradation{
