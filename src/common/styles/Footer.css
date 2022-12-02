@@ -1,0 +1,10 @@
+/* 작성자 : 이수화 */
+
+.Footer {
+    height: 100px;
+    line-height: 100px;
+    padding-left: 30px;
+    position: relative;
+    color: white;
+    background-color: #292929;
+}

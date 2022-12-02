@@ -7,9 +7,9 @@ import OrganizationPage from './pages/organization/OrganizationPage';
 import DevelopmentPage from './pages/development/DevelopmentPage';
 import DevelopmentFormPage from './pages/development/DevelopmentFormPage';
 import MyPage from './pages/my/MyPage';
-import NoticePage from './pages/notice/NoticePage';
-import NoticeDetailPage from './pages/notice/NoticeDetailPage';
-import NoticeFormPage from './pages/notice/NoticeFormPage';
+import NoticePage from './pages/notice/NoticePage/components/NoticePage';
+import NoticeDetailPage from './pages/notice/NoticeDetailPage/components/NoticeDetailPage';
+import NoticeFormPage from './pages/notice/NoticeFormPage/components/NoticeFormPage';
 
 import './App.css';
 
