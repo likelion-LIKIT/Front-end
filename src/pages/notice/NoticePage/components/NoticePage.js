@@ -1,9 +1,11 @@
-import '../styles/NoticePage.css';
+import Layout from "../../../../common/components/Layout";
 
 const NoticePage = () => {
   return (
     <div className="NoticePage">
-      Notice
+      <Layout page='notice'>
+        NoticePage
+      </Layout>
     </div>
   );
 }
