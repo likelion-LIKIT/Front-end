@@ -9,3 +9,7 @@
     height: auto;
     min-height: calc(100% - 100px);
 }
+
+#page {
+    margin: 50px;
+}

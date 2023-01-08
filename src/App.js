@@ -1,6 +1,8 @@
+// 작성자: 구현우
+
 import { Routes, Route } from 'react-router-dom';
 
-import MainPage from './pages/main/MainPage';
+import MainPage from './pages/main/components/MainPage';
 import LoginPage from './pages/login/components/LoginPage';
 import IntroducePage from './pages/introduce/IntroducePage';
 import OrganizationPage from './pages/organization/OrganizationPage';

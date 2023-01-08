@@ -11,7 +11,9 @@ const Layout = (page) => {
         <div id='wrapper'>
           <Header/>
           <Navbar/>
-          {page.children}
+          <div id='page'>
+            {page.children}
+          </div>
         </div>
         <Footer/>
       </div>
