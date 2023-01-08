@@ -14,17 +14,17 @@ const LoginBack = ({successLogin}) => {
     useEffect(() => {
         setTimeout(() => {
             setGradation(true);
-        }, 500);
+        }, 300);
     }, []);
 
     useEffect(() => {
         if(successLogin) {
             setTimeout(() => {
                 setMoveMain(true);
-            }, 1000);
+            }, 400);
             setTimeout(() => {
                 navigate(`/`);
-            }, 1600);
+            }, 1100);
         }
     }, [successLogin, navigate])
 

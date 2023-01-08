@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 import "../styles/LoginInput.css";
 
-const LoginInput = ({inputData, setInputData}) => {
+const LoginInput = ({inputData, setInputData, clickLogin}) => {
     const [idInputState, setIdInputState] = useState(false);
     const [pwInputState, setPwInputState] = useState(false);
 
@@ -26,15 +26,21 @@ const LoginInput = ({inputData, setInputData}) => {
         setInputData({...inputData, pw: e.target.value});
     }
 
+    const onKeyPress = (e) => {
+        if(e.key === 'Enter') {
+            clickLogin();
+        }
+    }
+
     return (
         <div id="LoginInput">
             <div>
                 <div>아이디</div>
-                <input className={["init_login_id", idInputState && "login_id"].join(' ')} type="text" value={inputData.id} onChange = {(e) => inputId(e)}></input>
+                <input className={["init_login_id", idInputState && "login_id"].join(' ')} type="text" value={inputData.id} onChange = {inputId}></input>
             </div>
             <div>
                 <div>비밀번호</div>
-                <input className={["init_login_pw", pwInputState && "login_pw"].join(' ')} type="password" autoComplete="new-password" value={inputData.pw} onChange = {(e) => inputPw(e)}></input>
+                <input className={["init_login_pw", pwInputState && "login_pw"].join(' ')} type="password" autoComplete="new-password" value={inputData.pw} onChange = {inputPw} onKeyPress={onKeyPress}></input>
             </div>
         </div>
     );

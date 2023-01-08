@@ -1,1 +1,73 @@
 /* 작성자 : 이수화 */
+
+:root {
+    --color-yellow: #FFC736;
+    --color-white: #ffffff;
+    --position-nav-top: 110px;
+    --width-nav: 180px;
+}
+
+.Navbar {
+    height: auto;
+}
+
+.navBtn {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: var(--position-nav-top);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-white);
+}
+
+.navBtn img {
+    width: 30px;
+}
+
+.navMenuBar {
+    width: var(--width-nav);
+    height: auto;
+    overflow: hidden;
+    transition: all 0.25s linear;
+    position: absolute;
+    top: var(--position-nav-top);
+    left: calc(-1*var(--width-nav));
+    background-color: var(--color-white);
+}
+
+.showNav {
+    width: var(--width-nav);
+    left: 0px;
+    transition: all 0.25s linear;
+}
+
+.navBtn, .navMenuBar {
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    box-shadow: 2px 0px 20px rgb(0, 0, 0, 0.1);
+    cursor: pointer;
+    z-index: 1;
+}
+
+.navTitle {
+    padding: 20px 0px 0px 20px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.navCategory {
+    padding: 0px 10px;
+}
+
+.navCategory div{
+    margin: 10px;
+    border-radius: 3px;
+    transition: all 0.1s linear;
+}
+
+.navCategory div:hover {
+    color: var(--color-yellow);
+    font-weight: bold;
+}

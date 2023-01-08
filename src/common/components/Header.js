@@ -3,13 +3,17 @@ import { useState, useEffect } from 'react';
 
 import Link from './Link';
 import { handleLogout } from '../utils/LogoutUtils';
+import { headerMenu } from '../constant/Header';
 import '../styles/Header.css';
 
-const Header = () => {
+const Header = ({page}) => {
     const [isLogin, setIsLogin] = useState(false);
 
     const makeNav = () => {
-      return menu.map((item, idx) => <Link key={idx} to={item[1]}>{item[0]}</Link>)
+      return headerMenu.map((item, idx) => 
+        <div className={item[1] === page ? 'clicked' : ''}>
+          <Link key={idx} to={`/${item[1]}`}>{item[0]}</Link>
+        </div>)
     };
 
     const makeInfo = () => {
@@ -43,9 +47,3 @@ const Header = () => {
   }
   
   export default Header;
-
-  const menu = [
-    ['소개', '/introduce'],
-    ['공지', '/notice'],
-    ['활동', '/activity']
-  ];

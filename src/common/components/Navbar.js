@@ -1,11 +1,53 @@
 // 작성자 : 이수화
 
-import '../styles/Navbar.css';
+import { useEffect, useState } from 'react';
 
-const Navbar = () => {
+import '../styles/Navbar.css';
+import { notShowPage } from '../constant/Navbar';
+import { category } from '../constant/Navbar';
+import Link from './Link';
+
+const Navbar = ({page}) => {
+    const [isHovering, setIsHovering] = useState(false);
+    const [showNavbar, setShowNavbar] = useState(true);
+    const handleMouse = {
+      onMouseOver: () => setIsHovering(true),
+      onMouseOut: () => setIsHovering(false)
+    }
+
+    const makeCategory = () => {
+      return Object.entries(category[page].category).map((page, idx) => <Link key={idx} to={`/${page[0]}`}>{page[1]}</Link>)
+    }
+
+    const makeNavBar = () => {
+      if(category[page]) {
+        return (
+          <>
+            <div className='navTitle'>{category[page].title}</div>
+            <div className='navCategory'>
+              { makeCategory() }
+            </div>
+          </>)
+      }
+    }
+
+    useEffect(() => {
+      if(notShowPage.includes(page)) {
+        setShowNavbar(false);
+      }
+    }, [page]);
+
     return (
       <div className="Navbar">
-        Navbar
+          {showNavbar && 
+            <>
+            <div className='navBtn' {...handleMouse}>
+                <img src={`${process.env.PUBLIC_URL}/images/Navbar_Arrow.png`} alt='nav button icon'/>
+            </div>
+            <div className={['navMenuBar', isHovering && 'showNav'].join(' ')} {...handleMouse}>
+              {makeNavBar()}
+            </div>
+          </>}
       </div>
     );
   }

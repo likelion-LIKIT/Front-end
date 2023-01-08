@@ -19,14 +19,14 @@ const LoginForm = ({successLogin, setSuccessLogin}) => {
     useEffect(() => {
         setTimeout(() => {
             setShowForm(true);
-        }, 1200);
+        }, 600);
     }, []);
 
     useEffect(() => {
         if(successLogin) {
             setTimeout(() => {
                 setShowForm(false);
-            }, 300);
+            }, 100);
         }
     }, [successLogin]);
 
@@ -45,17 +45,17 @@ const LoginForm = ({successLogin, setSuccessLogin}) => {
             setInputData({...inputData, id: ''});
         }
     }
-
+    
     return (
         <div className={["init_form", showForm && "LoginForm"].join(' ')}>
             <div className="loginform_top">로그인</div>
             <div className="loginform_input">
-                <LoginInput inputData = {inputData} setInputData = {setInputData}/>
+                <LoginInput inputData = {inputData} setInputData = {setInputData} clickLogin = {clickLogin}/>
             </div>
             <div className="loginform_bottom">
                 <button className={["init_login_button", buttonState && "login_button"].join(' ')} onClick = {() => clickLogin()}>로그인</button>
                 <div>
-                    <input type="checkBox" checked={saveId} onChange={(e) => changeSaveId(e)}></input>
+                    <input type="checkBox" checked={saveId} onChange={changeSaveId}></input>
                     <span>아이디 저장</span>
                 </div>
             </div>

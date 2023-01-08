@@ -5,14 +5,16 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import '../styles/Layout.css';
 
-const Layout = (page) => {
+const Layout = (props) => {
+    const {children, page} = props;
+
     return (
       <div className='Layout'>
         <div id='wrapper'>
-          <Header/>
-          <Navbar/>
+          <Header page = {page}/>
+          <Navbar page = {page}/>
           <div id='page'>
-            {page.children}
+            {children}
           </div>
         </div>
         <Footer/>
