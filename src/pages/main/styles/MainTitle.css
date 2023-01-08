@@ -1,0 +1,52 @@
+/* 작성자: 구현우 */
+
+#MainTitle {
+    width: 100%;
+    font-weight: bold;
+    padding: 20px 0 0 10px;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.init_first_title {
+    font-size: 50px;
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: all 0.6s linear;
+}
+
+.init_main_hidden {
+    width: 0;
+    height: 59px;
+    background-color: white;
+    position: absolute;
+    top: 20px;
+    transition: all 0.6s linear;
+}
+
+.main_first_title, .main_hidden {
+    width: 374.67px;
+}
+
+.init_second_title {
+    position: absolute;
+    top: 20px;
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: all 0.6s linear;
+}
+
+.main_second_title {
+    width: 374.67px;
+}
+
+.main_second_title, .init_second_title > div:nth-child(1) {
+    font-size: 32px;
+
+}
+
+.main_second_title, .init_second_title > div:nth-child(2) {
+    font-size: 20px;
+}  

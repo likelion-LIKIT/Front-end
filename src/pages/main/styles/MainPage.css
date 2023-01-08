@@ -1,0 +1,33 @@
+/* 작성자: 구현우 */
+
+#MainPage {
+    width: 100%;
+}
+
+#main_layout {
+    display: grid;
+    grid-template-columns: 3.2fr 1.8fr;
+}
+
+#main_layout > div:nth-child(1) {
+    margin-right: 30px;
+}
+
+#main_layout > div:nth-child(2) {
+    margin-left: 30px;
+}
+
+.init_frame {
+    width: 100%;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5.2px 16px 0 rgb(33 34 34 / 10%);
+    opacity: 0;
+    margin-top: -10px;
+    transition: all 0.6s linear;
+}
+
+.main_frame {
+    opacity: 1;
+    margin-top: 0;
+}
