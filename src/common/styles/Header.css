@@ -30,7 +30,6 @@
 
 .headerNav div:hover, .clicked {
     color: #F5B100;
-    border-bottom: 2px solid #F5B100;
 }
 
 .headerLogo {

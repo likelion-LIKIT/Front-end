@@ -16,6 +16,7 @@
     height: 50px;
     position: absolute;
     top: var(--position-nav-top);
+    left: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,7 +31,7 @@
     width: var(--width-nav);
     height: auto;
     overflow: hidden;
-    transition: all 0.25s linear;
+    transition: all 0.3s linear;
     position: absolute;
     top: var(--position-nav-top);
     left: calc(-1*var(--width-nav));
@@ -40,7 +41,7 @@
 .showNav {
     width: var(--width-nav);
     left: 0px;
-    transition: all 0.25s linear;
+    transition: all 0.3s linear;
 }
 
 .navBtn, .navMenuBar {
@@ -51,23 +52,29 @@
     z-index: 1;
 }
 
+.navMenuBar {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
 .navTitle {
-    padding: 20px 0px 0px 20px;
+    padding: 15px;
+    padding-top: 25px;
     font-weight: bold;
     font-size: 18px;
 }
 
 .navCategory {
-    padding: 0px 10px;
+    padding-bottom: 10px;
 }
 
 .navCategory div{
     margin: 10px;
     border-radius: 3px;
-    transition: all 0.1s linear;
+    transition: all 0.2s linear;
+    font-weight: 550;
 }
 
 .navCategory div:hover {
     color: var(--color-yellow);
-    font-weight: bold;
 }
