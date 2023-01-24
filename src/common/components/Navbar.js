@@ -16,14 +16,14 @@ const Navbar = ({page}) => {
     }
 
     const makeCategory = () => {
-      return Object.entries(category[page].category).map((page, idx) => <Link key={idx} to={`/${page[0]}`}>{page[1]}</Link>)
+      return Object.entries(category[page].category).map((page, idx) => <Link key={idx} to={`/${page[0]}`}>&nbsp;&nbsp;&nbsp;{page[1]}</Link>)
     }
 
     const makeNavBar = () => {
       if(category[page]) {
         return (
           <>
-            <div className='navTitle'>{category[page].title}</div>
+            <div className='navTitle'>&nbsp;&nbsp;&nbsp;{category[page].title}</div>
             <div className='navCategory'>
               { makeCategory() }
             </div>
