@@ -12,7 +12,5 @@
 }
 
 #page {
-    width: calc(100% - 100px);
     margin: 50px;
-    position: absolute;
 }
