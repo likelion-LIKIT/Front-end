@@ -3,12 +3,21 @@
 import CalenderUtils from "../utils/CalenderUtils";
 
 import "../styles/MainCalender.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const MainCalender = () => {
-  const [dateState, setDateState] = useState({
-    monthList: CalenderUtils.monthList()
-  });
+  const [dateState, setDateState] = useState({});
+
+  const [clickBtn, setClickBtn] = useState(false);
+  const [directionBtn, setDirectionBtn]  = useState('');
+
+  useEffect(() => {
+    if(directionBtn === '') setDateState({ monthList: CalenderUtils.monthList() });
+    else if(clickBtn) {
+      setDateState({ monthList: CalenderUtils.updateCalender(directionBtn) });
+      setClickBtn(false);
+    }
+  },[directionBtn, clickBtn]);
 
   const calenderHeader = () => {
     const dayWeek = [['일', '1'], ['월', '0.9'], ['화', '0.8'], ['수', '0.7'], ['목', '0.6'], ['금', '0.5'], ['토', '0.4']];
@@ -38,15 +47,22 @@ const MainCalender = () => {
   const calenderBody = () => {
     const body = [];
 
-    for(let i = 0; i < dateState.monthList.length; i++) {
-      body.push(
-        <div key={i} id="calender_body_element" style={colorCheck(dateState.monthList[i])}>
-          {dateState.monthList[i]}
-        </div>
-      );
+    if(dateState.monthList) {
+      for(let i = 0; i < dateState.monthList.length; i++) {
+        body.push(
+          <div key={i} id="calender_body_element" style={colorCheck(dateState.monthList[i])}>
+            {dateState.monthList[i]}
+          </div>
+        );
+      }
     }
 
     return body;
+  }
+
+  const turnOverCalender = (direction) => {
+    setClickBtn(true);
+    setDirectionBtn(direction);
   }
 
   return (
@@ -56,8 +72,8 @@ const MainCalender = () => {
         <div id="calender_header">{calenderHeader()}</div>
         <div id="calender_body">
           {calenderBody()}
-          <div className="calender_left_button"><img src="images/calender_left_button.png" alt="left"/></div>
-          <div className="calender_right_button"><img src="images/calender_right_button.png" alt="right"/></div>
+          <div className="calender_left_button"><img src="images/calender_left_button.png" alt="left" onClick={() => turnOverCalender('left')}/></div>
+          <div className="calender_right_button"><img src="images/calender_right_button.png" alt="right" onClick={() => turnOverCalender('right')}/></div>
         </div>
       </div>
     </div>
