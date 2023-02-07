@@ -1,15 +1,23 @@
 // 작성자: 구현우
 
 import CalenderUtils from "../utils/CalenderUtils";
+import ScheduleUtils from "../utils/ScheduleUtils";
 
 import "../styles/MainCalender.css";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 const MainCalender = () => {
   const [dateState, setDateState] = useState({});
+  const [scheduleState, setScheduleState] = useState({});
 
   const [clickBtn, setClickBtn] = useState(false);
   const [directionBtn, setDirectionBtn]  = useState('');
+
+  useEffect(() => {
+    if(dateState.monthList) {
+      setScheduleState({ ...ScheduleUtils.setSchedule(dateState.monthList) });
+    }
+  }, [dateState])
 
   useEffect(() => {
     if(directionBtn === '') setDateState({ monthList: CalenderUtils.monthList() });
@@ -37,11 +45,32 @@ const MainCalender = () => {
   const colorCheck = (date) => {
     let style = {};
 
-    if(date.split(' ').includes('01일') || date.split(' ').includes('오늘')) {
+    if(date[2] === '01' || date.includes(' 오늘')) {
       style = { ...style, color: "#ffb700" };
     }
 
     return style;
+  }
+
+  const scheduleBody = (date) => {
+    if(date.length > 3) date.pop();
+    const str_date = date.join('-');
+
+    const day_schedule = [];
+
+    if(scheduleState[str_date]) {
+      scheduleState[str_date].forEach((date_object, index) => {
+        day_schedule.push(
+          <div key={index} id="schedule_body_element">
+            <span>{Number(date_object.hour) < 10 ? '0' + date_object.hour : date_object.hour}</span>
+            <span>{Number(date_object.minute) < 10 ? '0' + date_object.minute : date_object.minute} </span>
+            <span>{date_object.contents}</span>
+          </div>
+        )
+      })
+    }
+
+    return day_schedule;
   }
 
   const calenderBody = () => {
@@ -51,7 +80,17 @@ const MainCalender = () => {
       for(let i = 0; i < dateState.monthList.length; i++) {
         body.push(
           <div key={i} id="calender_body_element" style={colorCheck(dateState.monthList[i])}>
-            {dateState.monthList[i]}
+            <div id="calender_body_element_header">
+              <div>{
+                (dateState.monthList[i][2] === '01' ? (dateState.monthList[i][1] + '.') : '') +
+                dateState.monthList[i][2] +
+                (dateState.monthList[i][3] ? dateState.monthList[i][3] : '')
+              }</div>
+              <button>+</button>
+            </div>
+            <div id="calender_body_element_content">
+              {scheduleBody(dateState.monthList[i])}
+            </div>
           </div>
         );
       }

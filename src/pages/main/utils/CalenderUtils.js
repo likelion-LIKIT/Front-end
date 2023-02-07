@@ -82,13 +82,10 @@ const CalenderUtils = {
         const filterMonth = monthList.map((dateChar) => {
             const date = dateChar.split('-');
 
-            let result = `${date[2]}일`;
+            let result = [`${date[0]}`, `${date[1]}`, `${date[2]}`];
 
-            if(date[2] === '01') {
-                result = `${date[1]}월 ${result}`;
-            }
             if(dateChar === `${this.today.year}-${this.tensCheck(this.today.month)}-${this.tensCheck(this.today.date)}`) {
-                result += ` 오늘`;
+                result.push(` 오늘`);
             }
             
             return result;

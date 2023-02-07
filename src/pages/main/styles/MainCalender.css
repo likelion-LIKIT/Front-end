@@ -51,13 +51,22 @@
     margin: 1px;
     font-size: 10px;
     font-weight: bold;
-    transition: all 0.2s linear;
+    transition: all 0.25s linear;
+    overflow: hidden;
+    white-space: nowrap; 
 }
 
 #calender_body_element:hover {
+    overflow: scroll;
     box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.2);
-    transform: scale(1.3);
+    transform: scale(1.5);
     z-index: 999;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#calender_body_element:hover::-webkit-scrollbar {
+    display: none;
 }
 
 .calender_left_button, .calender_right_button {
@@ -93,4 +102,41 @@
 
 .calender_left_button > img, .calender_right_button > img {
     height: 60%;
+}
+
+#calender_body_element_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 3px;
+    height: 15px;
+}
+
+#calender_body_element_header > button {
+    border: none;
+    background-color: white;
+    color: white;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 18px;
+    padding-right: 0;
+    transition: all 0.2s linear;
+}
+
+#calender_body_element:hover > #calender_body_element_header > button {
+    color: black;
+}
+
+#calender_body_element:hover > #calender_body_element_header > button:hover {
+    color: #FFC736;
+}
+
+#calender_body_element_content {
+    margin: 2px 1px 3px 1px;
+}
+
+#schedule_body_element {
+    margin: 3px 1px;
 }
