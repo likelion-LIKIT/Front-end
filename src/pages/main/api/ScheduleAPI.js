@@ -35,8 +35,24 @@ const ScheduleAPI = {
         return this.schedule_data;
     },
 
-    deleteSchedule() {
+    deleteSchedule(date, schedule) {
+        // 삭제 처리 api 구현 필요
 
+        const change_data = [];
+
+        this.schedule_data[date].forEach((elements) => {
+            if(schedule.hour !== elements.hour || schedule.minute !== elements.minute) {
+                change_data.push(elements);
+            }
+        });
+
+        if(change_data.length) {
+            this.schedule_data[date] = change_data;
+        } else {
+            delete this.schedule_data[date];
+        }
+        
+        return this.schedule_data;
     }
 }
 

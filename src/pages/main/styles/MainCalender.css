@@ -52,8 +52,7 @@
     font-size: 10px;
     font-weight: bold;
     transition: all 0.25s linear;
-    overflow: hidden;
-    white-space: nowrap; 
+    overflow: scroll;
 }
 
 #calender_body_element:hover {
@@ -114,8 +113,8 @@
 
 #calender_body_element_header > button {
     border: none;
-    background-color: white;
-    color: white;
+    background-color: transparent;
+    color: transparent;
     height: 100%;
     display: flex;
     justify-content: flex-end;
@@ -134,9 +133,44 @@
 }
 
 #calender_body_element_content {
-    margin: 2px 1px 3px 1px;
+    margin: 2px 0 3px 0;
 }
 
 #schedule_body_element {
-    margin: 3px 1px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px 2px 3px 3px;
+    transition: all 0.2s linear;
+    -ms-user-select: none; 
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#schedule_body_element:hover {
+    background-color: #fffaeb;
+}
+
+#schedule_body_element > button{
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    color: transparent;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 21px;
+    padding-right: 3px;
+    transition: all 0.1s linear;
+}
+
+#schedule_body_element:hover > button {
+    color: black;
+}
+
+#schedule_body_element:hover > button:hover {
+    color: #FFC736;
 }

@@ -52,6 +52,13 @@ const MainCalender = () => {
     return style;
   }
 
+  const removeSchedule = (date, schedule) => {
+    const updateSchedule = ScheduleUtils.removeSchedule(date, schedule);
+    if(updateSchedule) {
+      setScheduleState({ ...updateSchedule });
+    }
+  }
+
   const scheduleBody = (date) => {
     if(date.length > 3) date.pop();
     const str_date = date.join('-');
@@ -62,9 +69,12 @@ const MainCalender = () => {
       scheduleState[str_date].forEach((date_object, index) => {
         day_schedule.push(
           <div key={index} id="schedule_body_element">
-            <span>{Number(date_object.hour) < 10 ? '0' + date_object.hour : date_object.hour}</span>
-            <span>{Number(date_object.minute) < 10 ? '0' + date_object.minute : date_object.minute} </span>
-            <span>{date_object.contents}</span>
+            <span>
+              <span>{Number(date_object.hour) < 10 ? '0' + date_object.hour : date_object.hour}</span>
+              <span>{Number(date_object.minute) < 10 ? '0' + date_object.minute + '-' : date_object.minute + '-' }</span>
+              <span>{date_object.contents}</span>
+            </span>
+            <button onClick={() => removeSchedule(str_date, date_object)}>-</button>
           </div>
         )
       })
@@ -79,8 +89,8 @@ const MainCalender = () => {
     if(dateState.monthList) {
       for(let i = 0; i < dateState.monthList.length; i++) {
         body.push(
-          <div key={i} id="calender_body_element" style={colorCheck(dateState.monthList[i])}>
-            <div id="calender_body_element_header">
+          <div key={i} id="calender_body_element">
+            <div id="calender_body_element_header" style={colorCheck(dateState.monthList[i])}>
               <div>{
                 (dateState.monthList[i][2] === '01' ? (dateState.monthList[i][1] + '.') : '') +
                 dateState.monthList[i][2] +
