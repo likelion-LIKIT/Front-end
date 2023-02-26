@@ -2,6 +2,19 @@
 
 const ScheduleAPI = {
     schedule_data : {},
+    
+    addSchedule(date, newSchedule) {
+        if(this.schedule_data[date]) {
+            this.schedule_data[date] = [
+                ...this.schedule_data[date],
+                newSchedule
+            ]
+        } else {
+            this.schedule_data[date] = [newSchedule];
+        }
+
+        return this.schedule_data;
+    },
 
     getSchedule(monthList) {
         // 스케줄 받아오는 api 작성 필요
@@ -51,7 +64,7 @@ const ScheduleAPI = {
         } else {
             delete this.schedule_data[date];
         }
-        
+
         return this.schedule_data;
     }
 }

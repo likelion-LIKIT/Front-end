@@ -4,7 +4,8 @@ import CalenderUtils from "../utils/CalenderUtils";
 import ScheduleUtils from "../utils/ScheduleUtils";
 
 import "../styles/MainCalender.css";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
+import ScheduleModal from "./ScheduleModal";
 
 const MainCalender = () => {
   const [dateState, setDateState] = useState({});
@@ -12,6 +13,8 @@ const MainCalender = () => {
 
   const [clickBtn, setClickBtn] = useState(false);
   const [directionBtn, setDirectionBtn]  = useState('');
+
+  const [showScheduleModal, setShowScheduleModal] = useState(false);
 
   useEffect(() => {
     if(dateState.monthList) {
@@ -83,6 +86,10 @@ const MainCalender = () => {
     return day_schedule;
   }
 
+  const setAddSchedule = (date) => {
+
+  }
+
   const calenderBody = () => {
     const body = [];
 
@@ -96,7 +103,7 @@ const MainCalender = () => {
                 dateState.monthList[i][2] +
                 (dateState.monthList[i][3] ? dateState.monthList[i][3] : '')
               }</div>
-              <button>+</button>
+              <button onClick={() => setAddSchedule(dateState.monthList[i])}>+</button>
             </div>
             <div id="calender_body_element_content">
               {scheduleBody(dateState.monthList[i])}
@@ -115,17 +122,26 @@ const MainCalender = () => {
   }
 
   return (
-    <div id="MainCalender">
-      <div id="calender_title"><span>📅</span>일정</div>
-      <div>
-        <div id="calender_header">{calenderHeader()}</div>
-        <div id="calender_body">
-          {calenderBody()}
-          <div className="calender_left_button"><img src="images/calender_left_button.png" alt="left" onClick={() => turnOverCalender('left')}/></div>
-          <div className="calender_right_button"><img src="images/calender_right_button.png" alt="right" onClick={() => turnOverCalender('right')}/></div>
+    <>
+      <div id="MainCalender">
+        <div id="calender_title"><span>📅</span>일정</div>
+        <div>
+          <div id="calender_header">{calenderHeader()}</div>
+          <div id="calender_body">
+            {calenderBody()}
+            <div className="calender_left_button"><img src="images/calender_left_button.png" alt="left" onClick={() => turnOverCalender('left')}/></div>
+            <div className="calender_right_button"><img src="images/calender_right_button.png" alt="right" onClick={() => turnOverCalender('right')}/></div>
+          </div>
         </div>
       </div>
-    </div>
+
+      <ScheduleModal
+        show = {showScheduleModal}
+        onHide = {() =>  setShowScheduleModal(showScheduleModal && !showScheduleModal)}
+        width = {"500px"}
+        height = {"500px"}
+      />
+    </>
   );
 }
 
