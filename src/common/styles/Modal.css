@@ -1,0 +1,41 @@
+/* 작성자 : 구현우 */
+
+.Modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 998;
+    background-color: transparent;
+    pointer-events: none; 
+    transition: all linear 0.2s;
+}
+
+.show_Modal {
+    background-color: rgba(0, 0, 0, 0.6);
+    pointer-events: all;
+}
+
+.modal_box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    background-color: transparent;
+    z-index: 999;
+    border-radius: 15px;
+    box-shadow: none;
+    margin-top: -10px;
+    pointer-events: none; 
+    transition: all linear 0.2s;
+}
+
+.show_modal_box {
+    margin-top: 0;
+    background-color: white;
+    box-shadow: 1px 1px 16px 0 rgb(33 34 34 / 50%);
+    pointer-events: all;
+}
