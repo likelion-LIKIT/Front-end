@@ -87,7 +87,7 @@ const MainCalender = () => {
   }
 
   const setAddSchedule = (date) => {
-
+    setShowScheduleModal(date);
   }
 
   const calenderBody = () => {

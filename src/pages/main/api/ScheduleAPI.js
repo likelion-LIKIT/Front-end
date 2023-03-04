@@ -4,16 +4,7 @@ const ScheduleAPI = {
     schedule_data : {},
     
     addSchedule(date, newSchedule) {
-        if(this.schedule_data[date]) {
-            this.schedule_data[date] = [
-                ...this.schedule_data[date],
-                newSchedule
-            ]
-        } else {
-            this.schedule_data[date] = [newSchedule];
-        }
-
-        return this.schedule_data;
+        // 스케줄 추가 api 작성 필요
     },
 
     getSchedule(monthList) {

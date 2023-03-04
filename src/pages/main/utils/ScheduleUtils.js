@@ -1,6 +1,7 @@
 // 작성자: 구현우
 
 import ScheduleAPI from "../api/ScheduleAPI";
+import ExceptionUtils from "./ExceptionUtils";
 
 const ScheduleUtils = {
     setSchedule(monthList) {
@@ -14,6 +15,11 @@ const ScheduleUtils = {
             return ScheduleAPI.deleteSchedule(date, schedule);
         }
         return false;
+    },
+
+    checkData(date, scheduleData) {
+        if(!ExceptionUtils.checkException(scheduleData)) return;
+        ScheduleAPI.addSchedule(date, scheduleData);
     }
 }
 
