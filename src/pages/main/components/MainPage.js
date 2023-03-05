@@ -21,7 +21,7 @@ const MainPage = () => {
 
   return (
     <div id="MainPage">
-      <Layout>
+      <Layout page = "main">
         <div id='main_layout'>
           <div>
             <div><MainTitle /></div>
