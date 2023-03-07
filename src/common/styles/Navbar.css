@@ -21,6 +21,7 @@
     justify-content: center;
     align-items: center;
     background-color: var(--color-white);
+    box-shadow: 2px 0px 20px rgb(0, 0, 0, 0.1);
 }
 
 .navBtn img {
@@ -31,23 +32,25 @@
     width: var(--width-nav);
     height: auto;
     overflow: hidden;
-    transition: all 0.3s linear;
+    transition: all 0.4s ease;
     position: absolute;
     top: var(--position-nav-top);
     left: calc(-1*var(--width-nav));
     background-color: var(--color-white);
+    opacity: 0;
 }
 
 .showNav {
     width: var(--width-nav);
     left: 0px;
-    transition: all 0.3s linear;
+    transition: all 0.5s ease-out;
+    opacity: 1;
+    box-shadow: 2px 0px 20px rgb(0, 0, 0, 0.1);
 }
 
 .navBtn, .navMenuBar {
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
-    box-shadow: 2px 0px 20px rgb(0, 0, 0, 0.1);
     cursor: pointer;
     z-index: 1;
 }

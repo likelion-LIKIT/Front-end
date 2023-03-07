@@ -53,6 +53,8 @@
     font-weight: bold;
     transition: all 0.25s linear;
     overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 #calender_body_element:hover {
@@ -60,11 +62,9 @@
     box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.2);
     transform: scale(1.5);
     z-index: 999;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
 }
 
-#calender_body_element:hover::-webkit-scrollbar {
+#calender_body_element::-webkit-scrollbar {
     display: none;
 }
 
