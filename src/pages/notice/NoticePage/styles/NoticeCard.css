@@ -1,0 +1,71 @@
+/* 작성자 : 이수화 */
+
+.NoticeCard {
+    width: calc(100% - 40px);
+    min-width: 200px;
+    max-height: 300px;
+    height: auto;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 30px rgb(0, 0, 0, 0.1);
+    transition: all 0.3s linear;
+}
+
+.NoticeCard:hover {
+    transform: translateY(-10px);
+    cursor: pointer;
+}
+
+.noticeCardTop {
+    width: calc(100% - 30px);
+    height: 35%;
+    margin: 0px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.noticeCardBottom {
+    width: 100%;
+    height: 65%;
+}
+
+.noticeCardCategory {
+    height: 30%;
+    display: flex;
+    align-items: center;
+}
+
+/* 아이콘 */
+.noticeCardCategory span:nth-child(1) {
+    margin-right: 5px;
+}
+
+/* 카테고리 */
+.noticeCardCategory span:nth-child(2) {
+    padding: 3px 12px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px rgb(0, 0, 0, 0.1);
+    font-weight: 600;
+}
+
+.noticeCardTitle {
+    margin: 7px 0px;
+    font-size: 20px;
+    font-weight: bold;
+    /* ... 처리 */
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
+.noticeCardDate {
+    font-size: 12px;
+}
+
+.noticeCardBottom img {
+    width: 100%;
+    height: 100%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
