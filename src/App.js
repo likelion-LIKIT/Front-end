@@ -12,6 +12,8 @@ import MyPage from './pages/my/MyPage';
 import NoticePage from './pages/notice/NoticePage/components/NoticePage';
 import NoticeDetailPage from './pages/notice/NoticeDetailPage/components/NoticeDetailPage';
 import NoticeFormPage from './pages/notice/NoticeFormPage/components/NoticeFormPage';
+import ActivityPage from './pages/activity/ActivityPage/components/ActivityPage';
+import ActivityDetailPage from './pages/activity/ActivityDetailPage/components/ActivityDetailPage';
 
 import './App.css';
 
@@ -29,6 +31,8 @@ const App = () => {
         <Route path="/notice" element={<NoticePage/>}/>
         <Route path="/notice/detail/:id" element={<NoticeDetailPage/>}/>
         <Route path="/notice/form" element={<NoticeFormPage/>}/>
+        <Route path="/activity" element={<ActivityPage/>}/>
+        <Route path="/activity/detail/:id" element={<ActivityDetailPage/>}/>
       </Routes>
     </div>
   );
