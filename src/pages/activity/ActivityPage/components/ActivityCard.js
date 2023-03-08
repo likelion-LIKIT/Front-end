@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import "../styles/ActivityCard.css";
 
 const ActivityCard = (props) => {
-  const { data, idx, width, cardIdx, currentIdx } = props;
+  const { data, idx, width, currentIdx } = props;
   const navigate = useNavigate();
   const [showCard, setShowCard] = useState({
     depthOne: false,

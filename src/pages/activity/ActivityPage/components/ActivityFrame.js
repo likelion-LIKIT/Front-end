@@ -6,10 +6,10 @@ import ActivityCard from "./ActivityCard";
 import { activityData as data } from "../constant/activityData";
 
 function useWindowSize() {
-  const [size, setSize] = useState([0, 0]);
+  const [size, setSize] = useState(0);
   useLayoutEffect(() => {
     function updateSize() {
-      setSize([window.innerWidth, window.innerHeight]);
+      setSize(window.innerWidth);
     }
     window.addEventListener("resize", updateSize);
     updateSize();
@@ -22,7 +22,7 @@ const ActivityFrame = () => {
   // 필요 변수
 
   // 현재 화면 width
-  const [windowWidth, windowHeigt] = useWindowSize();
+  const windowWidth = useWindowSize();
   // 원본 데이터
   const originalData = data;
   // 원본 데이터 길이
@@ -67,7 +67,6 @@ const ActivityFrame = () => {
     let nextIdx = currentIdx - 1;
     setCurrentIdx(nextIdx);
     if (nextIdx - addCnt < 0) {
-      console.log(currentIdx, nextIdx);
       nextIdx += originalDataLength;
       replaceSlide(nextIdx);
     }
@@ -78,7 +77,6 @@ const ActivityFrame = () => {
     let nextIdx = currentIdx + 1;
     setCurrentIdx(nextIdx);
     if (nextIdx - addCnt >= originalDataLength - 1) {
-      console.log(currentIdx, nextIdx);
       nextIdx -= originalDataLength;
       replaceSlide(nextIdx);
     }

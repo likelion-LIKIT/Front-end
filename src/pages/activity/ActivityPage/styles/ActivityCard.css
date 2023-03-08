@@ -1,7 +1,8 @@
 /* 작성자 : 이수화 */
 
 .ActivityCard {
-    height: 480px;
+    min-height: 480px;
+    height: 60vh;
     background-color: rgb(238, 238, 238);
     transition: all 0.5s linear;
     border-radius: 10px;
