@@ -1,0 +1,72 @@
+/* 작성자 : 이수화 */
+
+.deleteModalBody, .deleteModalText {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.deleteModalBody {
+    height: 100%;
+}
+
+.deleteModalText {
+    justify-content: center;
+    height: 80%;
+    align-items: center;
+}
+
+.deleteModalText img {
+    width: 80px;
+    margin: 30px 10px 10px;
+}
+
+.deleteModalText span:nth-of-type(1) {
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.deleteModalText span:nth-of-type(2) {
+    color: #444444;
+}
+
+.deleteModalBtns {
+    height: 20%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 10px;
+}
+
+.deleteModalBtns button {
+    width: 80px;
+    height: 35px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 3px;
+    font-weight: bold;
+    color: white;
+    font-size: 16px;
+    font-family: 'SUIT-Regular';
+}
+
+.deleteModalBtns button:hover {
+    cursor: pointer;
+}
+
+.deleteModalBtns #cancel {
+    background-color: #D9D9D9;
+}
+
+.deleteModalBtns #cancel:hover {
+    background-color: #b3b3b3;
+}
+
+.deleteModalBtns #delete {
+    background-color: rgba(249, 31, 31, 0.686);
+}
+
+.deleteModalBtns #delete:hover {
+    background-color: rgba(255, 16, 16, 0.801);
+}
