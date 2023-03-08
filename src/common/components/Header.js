@@ -11,7 +11,7 @@ const Header = ({page}) => {
 
     const makeNav = () => {
       return headerMenu.map((item, idx) => 
-        <div className={item[1] === page ? 'clicked' : ''}>
+        <div key={idx} className={item[1] === page ? 'clicked' : ''}>
           <Link key={idx} to={`/${item[1]}`}>{item[0]}</Link>
         </div>)
     };

@@ -1,3 +1,5 @@
+// 작성자 : 이수화
+
 // 네브바를 보여주지 않는 페이지 목록
 export const notShowPage = [
     'main', 
@@ -19,7 +21,7 @@ const notice = {
     'title': '공지',
     'category': {
         'regulation': '회칙',
-        'notice': '공지사항',
+        'notice': '전체공지',
         'assignment': '과제공지',
         'accountBook': '장부'
     }
