@@ -1,0 +1,77 @@
+/* 작성자 : 이수화 */
+
+.Title {
+    width: calc(100% - 40px);
+    display: flex;
+    margin: 0 20px;
+}
+
+.titleBox {
+    width: 80%;
+}
+
+.titleParent, .subtitleParent {
+    width: 100%;
+    overflow-y: hidden;
+}
+
+/* 제목 */
+.titleChild {
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 50px;
+    animation-name: grow;
+    animation-duration: 0.8s; 
+}
+
+/* 부제목 */
+.subtitleChild {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 40px;
+    animation-name: grow;
+    animation-duration: 1s;
+}
+
+.titleParent {
+    height: 50px;
+}
+
+.writeBtn {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: grow;
+    animation-duration: 0.9s; 
+}
+
+.writeBtn button {
+    width: 130px;
+    height: 50%;
+    border: none;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgb(0, 0, 0, 0.1);
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'SUIT-Regular';
+    transition: all 0.5s;
+}
+
+.writeBtn button:hover {
+    color: #FFC736;
+    cursor: pointer;
+}
+
+@keyframes grow {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+

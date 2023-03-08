@@ -1,0 +1,41 @@
+/* 작성자 : 이수화 */
+
+.ActivityFrame {
+    width: calc(100% - 40px);
+    height: 480px;
+    min-height: 300px;
+    margin: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.activityContainer {
+    display: flex;
+    align-items: center;
+    /* overflow: hidden; */
+}
+
+.carouoselLeftBtn, .carouoselRightBtn {
+    width: 50px;
+    position: absolute;
+    top: 215px;
+    z-index: 999;
+}
+
+.carouoselLeftBtn {
+    left: 10px;
+}
+
+.carouoselRightBtn {
+    right: 10px;
+}
+
+.carouoselLeftBtn img, .carouoselRightBtn img {
+    width: 100%;
+    transition: all 0.2s linear;
+}
+
+.carouoselLeftBtn img:hover, .carouoselRightBtn img:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}

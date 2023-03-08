@@ -1,0 +1,44 @@
+/* 작성자 : 이수화 */
+
+.ActivityCard {
+    height: 480px;
+    background-color: rgb(238, 238, 238);
+    transition: all 0.5s linear;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+.showCard {
+    opacity: 1;
+}
+
+.ActivityCard:hover {
+    cursor: pointer;
+}
+
+.first, .fifth {
+    transform: scale(1, 0.7);
+    background-color: rgb(215, 215, 215);
+    z-index: 997;
+}
+
+.second, .fourth {
+    transform: scale(1.2, 0.85);
+    background-color: rgb(197, 197, 197);
+    z-index: 998;
+}
+
+.third {
+    transform: scale(1.5, 1);
+    z-index: 999;
+}
+
+.other {
+    transform: scale(1, 0.65);
+    height: 300px;
+}
+
+
