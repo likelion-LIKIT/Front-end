@@ -3,13 +3,15 @@
 .ActivityCard {
     min-height: 480px;
     height: 60vh;
-    background-color: rgb(238, 238, 238);
+    background-color: rgb(255, 255, 255);
     transition: all 0.5s linear;
     border-radius: 10px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     opacity: 0;
+    box-shadow: 4px 4px 20px 10px rgba(0, 0, 0, 0.055);
 }
 
 .showCard {
@@ -22,13 +24,13 @@
 
 .first, .fifth {
     transform: scale(1, 0.7);
-    background-color: rgb(215, 215, 215);
+    /* background-color: rgb(215, 215, 215); */
     z-index: 997;
 }
 
 .second, .fourth {
     transform: scale(1.2, 0.85);
-    background-color: rgb(197, 197, 197);
+    /* background-color: rgb(197, 197, 197); */
     z-index: 998;
 }
 
@@ -42,4 +44,44 @@
     height: 300px;
 }
 
+.activityCardInfo {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
 
+.activityCardInfo img {
+    width: 100%;
+    height: 70%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    transition: 0.5s;
+}
+
+.activityCardInfo img:hover {
+    transform: scale(1.1);
+}
+
+.activityPostInfo {
+    width: calc(100% - 30px);
+    height: auto;
+    min-height: 80px;
+    margin: 15px;
+    color: rgb(94, 94, 94);
+    background-color: white;
+}
+
+/* 제목 */
+.activityPostInfo div:nth-of-type(1) {
+    font-size: 16px;
+    font-weight: 600;
+    /* ... 처리 */
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
+/* 날짜 */
+.activityPostInfo div:nth-of-type(2) {
+    font-size: 13px;
+}
