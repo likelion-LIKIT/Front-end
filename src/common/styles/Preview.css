@@ -1,0 +1,17 @@
+/* 작성자 : 이수화 */
+
+/* 미리 보기 */
+.previewTitle {
+    width: calc(100% - 40px);
+    height: auto;
+    padding: 30px 20px;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.previewContents {
+    width: calc(100% - 40px);
+    height: auto;
+    padding: 0px 20px 30px;
+    font-size: 18px;
+}

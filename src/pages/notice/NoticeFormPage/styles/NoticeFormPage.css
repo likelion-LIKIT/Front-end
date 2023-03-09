@@ -1,0 +1,16 @@
+/* 작성자 : 이수화 */
+
+.NoticeFormPage {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.noticeFormMain, .noticeFormPreView {
+    width: 50%;
+    overflow-y: scroll;
+}
+
+.noticeFormMain {
+    overflow-x: hidden;
+}

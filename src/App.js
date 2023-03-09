@@ -10,7 +10,6 @@ import DevelopmentPage from './pages/development/DevelopmentPage';
 import DevelopmentFormPage from './pages/development/DevelopmentFormPage';
 import MyPage from './pages/my/MyPage';
 import NoticePage from './pages/notice/NoticePage/components/NoticePage';
-import NoticeFormPage from './pages/notice/NoticeFormPage/components/NoticeFormPage';
 import ActivityPage from './pages/activity/ActivityPage/components/ActivityPage';
 import RegulationPage from './pages/regulation/components/RegulationPage';
 import AssignMentPage from './pages/assignment/AssignmentPage/components/AssignmentPage';
@@ -19,6 +18,7 @@ import NoticeDetailPage from './pages/notice/NoticeDetailPage/components/NoticeD
 import ActivityDetailPage from './pages/activity/ActivityDetailPage/components/ActivityDetailPage';
 import AssignMentDetailPage from './pages/assignment/AssignmentDetailPage/components/AssignmentDetailPage';
 import AccountBookDetailPage from './pages/accountBook/AccountBookDetailPage/components/AccountBookDetailPage';
+import NoticeFormPage from './pages/notice/NoticeFormPage/components/NoticeFormPage';
 
 import './App.css';
 
