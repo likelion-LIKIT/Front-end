@@ -3,8 +3,7 @@
 .NoticeCard {
     width: calc(100% - 40px);
     min-width: 200px;
-    max-height: 300px;
-    height: auto;
+    height: 40vh;
     margin: 20px;
     border-radius: 10px;
     box-shadow: 5px 5px 30px rgb(0, 0, 0, 0.1);

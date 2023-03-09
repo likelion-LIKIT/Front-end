@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import "../styles/ActivityCard.css";
 
 const ActivityCard = (props) => {
-  const { data, idx, width, cardIdx, currentIdx } = props;
+  const { data, idx, width, currentIdx } = props;
   const navigate = useNavigate();
   const [showCard, setShowCard] = useState({
     depthOne: false,
@@ -15,23 +15,37 @@ const ActivityCard = (props) => {
 
   const setOrder = () => {
     let order;
-    if (idx === currentIdx) {
-      order = "first";
-      if (showCard.depthThree) order += " showCard";
-    } else if (idx === currentIdx + 1) {
-      order = "second";
-      if (showCard.depthTwo) order += " showCard";
-    } else if (idx === currentIdx + 2) {
-      order = "third";
-      if (showCard.depthOne) order += " showCard";
-    } else if (idx === currentIdx + 3) {
-      order = "fourth";
-      if (showCard.depthTwo) order += " showCard";
-    } else if (idx === currentIdx + 4) {
-      order = "fifth";
-      if (showCard.depthThree) order += " showCard";
-    } else order = "other";
-
+    switch (idx) {
+      case currentIdx: {
+        order = "first";
+        if (showCard.depthThree) order += " showCard";
+        break;
+      }
+      case currentIdx + 1: {
+        order = "second";
+        if (showCard.depthTwo) order += " showCard";
+        break;
+      }
+      case currentIdx + 2: {
+        order = "third";
+        if (showCard.depthOne) order += " showCard";
+        break;
+      }
+      case currentIdx + 3: {
+        order = "fourth";
+        if (showCard.depthTwo) order += " showCard";
+        break;
+      }
+      case currentIdx + 4: {
+        order = "fifth";
+        if (showCard.depthThree) order += " showCard";
+        break;
+      }
+      default: {
+        order = "other";
+        break;
+      }
+    }
     return order;
   };
 
@@ -70,9 +84,13 @@ const ActivityCard = (props) => {
       style={{ width: `${width}px` }}
       onClick={() => navigate(`/activity/detail/${data.id}`)}
     >
-      {/* cardIdx : {cardIdx}<br/>
-      currentIdx : {currentIdx} <br/>
-      idx : {idx} */}
+      <div className="activityCardInfo">
+        <img src="/images/default_image.png" alt="활동 일지 썸네일 이미지" />
+        <div className="activityPostInfo">
+          <div>{data.title}</div>
+          <div>{data.date}</div>
+        </div>
+      </div>
     </div>
   );
 };

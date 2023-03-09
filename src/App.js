@@ -10,10 +10,15 @@ import DevelopmentPage from './pages/development/DevelopmentPage';
 import DevelopmentFormPage from './pages/development/DevelopmentFormPage';
 import MyPage from './pages/my/MyPage';
 import NoticePage from './pages/notice/NoticePage/components/NoticePage';
-import NoticeDetailPage from './pages/notice/NoticeDetailPage/components/NoticeDetailPage';
 import NoticeFormPage from './pages/notice/NoticeFormPage/components/NoticeFormPage';
 import ActivityPage from './pages/activity/ActivityPage/components/ActivityPage';
+import RegulationPage from './pages/regulation/components/RegulationPage';
+import AssignMentPage from './pages/assignment/AssignmentPage/components/AssignmentPage';
+import AccountBookPage from './pages/accountBook/AccountBookPage/components/AccountBookPage';
+import NoticeDetailPage from './pages/notice/NoticeDetailPage/components/NoticeDetailPage';
 import ActivityDetailPage from './pages/activity/ActivityDetailPage/components/ActivityDetailPage';
+import AssignMentDetailPage from './pages/assignment/AssignmentDetailPage/components/AssignmentDetailPage';
+import AccountBookDetailPage from './pages/accountBook/AccountBookDetailPage/components/AccountBookDetailPage';
 
 import './App.css';
 
@@ -33,6 +38,11 @@ const App = () => {
         <Route path="/notice/form" element={<NoticeFormPage/>}/>
         <Route path="/activity" element={<ActivityPage/>}/>
         <Route path="/activity/detail/:id" element={<ActivityDetailPage/>}/>
+        <Route path="/regulation" element={<RegulationPage/>}/>
+        <Route path="/assignment" element={<AssignMentPage/>}/>
+        <Route path="/assignment/detail/:id" element={<AssignMentDetailPage/>}/>
+        <Route path="/accountBook" element={<AccountBookPage/>}/>
+        <Route path="/accountBook/detail/:id" element={<AccountBookDetailPage/>}/>
       </Routes>
     </div>
   );
