@@ -7,6 +7,7 @@
 #main_layout {
     display: grid;
     grid-template-columns: 3.2fr 1.8fr;
+    padding-top: 60px;
 }
 
 #main_layout > div:nth-child(1) {

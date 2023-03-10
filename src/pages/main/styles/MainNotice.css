@@ -1,0 +1,38 @@
+/* 작성자: 구현우 */
+
+#MainNotice {
+    padding: 30px;
+    position: relative;
+}
+
+#notice_title {
+    display: flex;
+    justify-content: space-between;
+}
+
+#notice_title > span:nth-child(1) {
+    font-size: 25px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+#notice_title > span:nth-child(1) > span:nth-child(1) {
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+#notice_title > span:nth-child(2) > button {
+    margin-left: 6px;
+    background-color: transparent;
+    font-weight: 700;
+    border: none;
+    font-size: 17px;
+    color: #707070;
+    transition: all linear 0.2s;
+}
+
+#notice_title > span:nth-child(2) > button:hover {
+    color: black;
+}

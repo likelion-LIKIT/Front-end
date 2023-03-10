@@ -13,9 +13,9 @@
     margin-bottom: 30px;
 }
 
-#calender_title > span {
+#calender_title > span:nth-child(1) {
     font-size: 30px;
-    margin-right: 8px;
+    margin-right: 10px
 }
 
 #calender_header {

@@ -124,7 +124,9 @@ const MainCalender = () => {
   return (
     <>
       <div id="MainCalender">
-        <div id="calender_title"><span>📅</span>일정</div>
+        <div id="calender_title">
+          <span>📅</span><span>일정</span>
+        </div>
         <div>
           <div id="calender_header">{calenderHeader()}</div>
           <div id="calender_body">
