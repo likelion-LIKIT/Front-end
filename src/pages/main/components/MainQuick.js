@@ -10,7 +10,11 @@ const MainQuick = () => {
           <span>Quick 메뉴</span>
           <span>for manager</span>
         </div>
-        <div>
+        <div id="quick_body">
+          <button>전체 공지 작성</button>
+          <button>과제 공지 작성</button>
+          <button>장부 작성</button>
+          <button>활동 내역 작성</button>
         </div>
     </div>
   );

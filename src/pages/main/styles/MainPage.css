@@ -16,6 +16,12 @@
 
 #main_layout > div:nth-child(2) {
     margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+#main_layout > div:nth-child(2) > div:nth-child(2) {
+    flex-grow: 1;
 }
 
 .init_frame {
