@@ -16,13 +16,26 @@ const Preview = ({ title, contents }) => {
     });
   };
 
+  // contents 미리보기 데이터 가공 함수
+  const processedContents = () => {
+    if (!contents) return;
+    return contents.split("\n").map((text, idx) => {
+      return (
+        <span key={idx}>
+          {text}
+          <br />
+        </span>
+      );
+    });
+  };
+
   return (
     <div className="Preview">
       <div className="previewTitle">
         <span>{processedTitle(title)}</span>
       </div>
       <div className="previewContents">
-        <span>{contents}</span>
+        <span>{processedContents(contents)}</span>
       </div>
     </div>
   );

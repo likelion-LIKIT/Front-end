@@ -6,3 +6,12 @@ export const formText = {
   accountBook: "회계장부",
   activity: "활동내역",
 };
+
+export const tagAddText = {
+  h1: "#",
+  h2: "##",
+  h3: "###",
+  h4: "####",
+  b: "**",
+  i: "_",
+};

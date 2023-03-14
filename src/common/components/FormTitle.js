@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import "../styles/FormTitle.css";
 
-const FormTitle = ({ page, setTitle }) => {
+const FormTitle = ({ page, title, setTitle }) => {
   const textAreaRef = useRef();
 
   const handleResizeHeight = () => {
@@ -19,6 +19,7 @@ const FormTitle = ({ page, setTitle }) => {
     <div className="FormTitle">
       <textarea
         rows={1}
+        maxLength={50}
         placeholder="제목을 입력하세요"
         ref={textAreaRef}
         onChange={(e) => {

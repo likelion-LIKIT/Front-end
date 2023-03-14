@@ -23,19 +23,19 @@
 }
 
 .first, .fifth {
-    transform: scale(1, 0.7);
+    transform: scale(1.0, 0.75);
     /* background-color: rgb(215, 215, 215); */
     z-index: 997;
 }
 
 .second, .fourth {
-    transform: scale(1.2, 0.85);
+    transform: scale(1.2, 0.95);
     /* background-color: rgb(197, 197, 197); */
     z-index: 998;
 }
 
 .third {
-    transform: scale(1.5, 1);
+    transform: scale(1.35, 1.1);
     z-index: 999;
 }
 

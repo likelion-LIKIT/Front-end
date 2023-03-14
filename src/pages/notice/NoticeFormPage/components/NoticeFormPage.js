@@ -15,8 +15,12 @@ const NoticeFormPage = () => {
     <div className="NoticeFormPage">
       <div className="noticeFormMain">
         <FormHeader page={"notice"} />
-        <FormTitle page={"notice"} setTitle={setTitle} />
-        <FormWriteBox page={"notice"} setContents={setContents} />
+        <FormTitle page={"notice"} title={title} setTitle={setTitle} />
+        <FormWriteBox
+          page={"notice"}
+          contents={contents}
+          setContents={setContents}
+        />
       </div>
       <div className="noticeFormPreView">
         <Preview title={title} contents={contents} />
