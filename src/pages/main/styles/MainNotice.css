@@ -1,13 +1,14 @@
 /* 작성자: 구현우 */
 
 #MainNotice {
-    padding: 30px;
+    padding: 30px 15px;
     position: relative;
 }
 
 #notice_title {
     display: flex;
     justify-content: space-between;
+    padding: 0px 20px;
 }
 
 #notice_title > span:nth-child(1) {
@@ -15,7 +16,7 @@
     font-weight: bold;
     display: flex;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 #notice_title > span:nth-child(1) > span:nth-child(1) {
@@ -35,4 +36,48 @@
 
 #notice_title > span:nth-child(2) > button:hover {
     color: black;
+}
+
+#notice_body {
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#notice_body::-webkit-scrollbar {
+    display: none;
+}
+
+.notice_contents {
+    margin: 15px 10px;
+    padding: 20px 40px;
+    box-shadow: 0 5.2px 16px 0 rgb(33 34 34 / 10%);
+    border-radius: 100px;
+    transition: all linear 0.2s;
+}
+
+.notice_contents:hover {
+    color: white;
+    background-color: #F9AD19;
+    transform: scale(1.02);
+}
+
+.notice_header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.notice_header > span:nth-child(1) {
+    font-size: 18px;
+}
+
+.notice_header > span:nth-child(2) {
+    font-size: 16px;
+    color: rgb(93, 93, 93);
+}
+
+.notice_contents:nth-child(2) {
+    font-size: 17px;
 }

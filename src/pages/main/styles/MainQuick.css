@@ -1,7 +1,7 @@
 /* 작성자: 구현우 */
 
 #MainQuick {
-    padding: 20px 30px;
+    padding: 15px 30px;
     position: relative;
 }
 
@@ -41,5 +41,5 @@
 #quick_body > button:hover {
     color: white;
     background-color: #F9AD19;
-    transform: scale(1.1);
+    transform: scale(1.03);
 }
