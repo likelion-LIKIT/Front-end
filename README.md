@@ -1,6 +1,6 @@
 # LIKIT
 
-## conventions
+## development conventions
 1. Airbnb javascript 코드 컨벤션 준수
 2. Angular commit message 컨벤션 준수
 3. file 상단에 작성자 이름 기재
