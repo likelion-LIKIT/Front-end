@@ -14,3 +14,13 @@
 .noticeFormMain {
     overflow-x: hidden;
 }
+
+@media ( max-width: 900px ) {
+    .noticeFormMain {
+        width: 100%;
+    }
+
+    .noticeFormPreView {
+        width: 0%;
+    }
+}
