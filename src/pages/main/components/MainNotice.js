@@ -4,17 +4,17 @@ import NoticeUtils from "../utils/NoticeUtils";
 
 import "../styles/MainNotice.css";
 
-import { useEffect, useRef, useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
-const MainNotice = ({ height }) => {
+const MainNotice = () => {
   const [noticeState, setNoticeState] = useState(NoticeUtils.setNotice());
 
-  const titleRef = useRef();
-  const bodyRef = useRef();
+  const gradientTop = useRef();
+  const gradientBottom = useRef();
 
   useEffect(() => {
-    bodyRef.current.style = `height: ${height - titleRef.current.offsetHeight - 60}px`;
-  }, [height]);
+    setGradient();
+  }, []);
 
   const showNotice = () => {
     const answer = [];
@@ -34,9 +34,28 @@ const MainNotice = ({ height }) => {
     return answer;
   };
 
+  const setGradient = () => {
+    const noticeBody = document.getElementById("notice_body");
+
+    if (Math.floor(noticeBody.scrollTop) === 0) {
+      gradientTop.current.style = "background: linear-gradient(transparent, transparent);";
+    } else {
+      gradientTop.current.style = "background: linear-gradient(white, transparent);";
+    }
+
+    if (
+      Math.floor(noticeBody.scrollTop + noticeBody.clientHeight) ===
+      Math.floor(noticeBody.scrollHeight)
+    ) {
+      gradientBottom.current.style = "background: linear-gradient(transparent, transparent);";
+    } else {
+      gradientBottom.current.style = "background: linear-gradient(to top, white, transparent);";
+    }
+  };
+
   return (
     <div id="MainNotice">
-      <div ref={titleRef} id="notice_title">
+      <div id="notice_title">
         <span>
           <span>📢</span>
           <span>소식</span>
@@ -46,9 +65,11 @@ const MainNotice = ({ height }) => {
           <button>과제 공지</button>
         </span>
       </div>
-      <div ref={bodyRef} id="notice_body">
+      <div ref={gradientTop} className="notice_gradient_top"></div>
+      <div onScroll={() => setGradient()} id="notice_body">
         {showNotice()}
       </div>
+      <div ref={gradientBottom} className="notice_gradient_bottom"></div>
     </div>
   );
 };

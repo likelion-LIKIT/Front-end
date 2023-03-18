@@ -6,7 +6,7 @@
 }
 
 #quick_title {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
     display: flex;
     align-items: center;
@@ -14,23 +14,22 @@
 }
 
 #quick_title > span:nth-child(1) {
-    font-size: 30px;
+    font-size: 25px;
     margin-right: 10px
 }
 
 #quick_title > span:nth-child(3) {
-    font-size: 15px;
+    font-size: 12px;
     margin-left: 5px;
     color: #707070;
     margin-bottom: -8px;
 }
 
 #quick_body > button {
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 600;
     padding: 10px 25px;
-    margin-right: 10px;
-    margin-bottom: 15px;
+    margin: 5px;
     background-color: transparent;
     border: none;
     box-shadow: 0 5.2px 16px 0 rgb(33 34 34 / 10%);
@@ -42,4 +41,10 @@
     color: white;
     background-color: #F9AD19;
     transform: scale(1.03);
+}
+
+@media (max-width: 1250px) {
+    #MainQuick {
+        padding: 15px 20px;
+    }
 }
