@@ -1,0 +1,118 @@
+/* 작성자: 구현우 */
+
+#MainNotice {
+    height: calc(100% - 60px);
+    padding: 30px 15px;
+    position: relative;
+}
+
+#notice_title {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+}
+
+#notice_title > span:nth-child(1) {
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#notice_title > span:nth-child(1) > span:nth-child(1) {
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+#notice_title > span:nth-child(2) > button {
+    margin-left: 6px;
+    background-color: transparent;
+    font-weight: 700;
+    border: none;
+    font-size: 15px;
+    color: #707070;
+    transition: all linear 0.2s;
+}
+
+#notice_title > span:nth-child(2) > button:hover {
+    color: black;
+}
+
+#notice_body {
+    height: calc(100% - 70px);
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    position: relative;
+}
+
+.notice_gradient_top, .notice_gradient_bottom {
+    position: absolute;
+    width: calc(100% - 30px);
+    height: 100px;
+    z-index: 1;
+}
+
+.notice_gradient_top {
+    top: 83px;
+}
+
+.notice_gradient_bottom {
+    bottom: 30px;
+}
+
+#notice_body::-webkit-scrollbar {
+    display: none;
+}
+
+.notice_contents {
+    margin: 15px 10px;
+    padding: 20px 40px;
+    box-shadow: 0 5.2px 16px 0 rgb(33 34 34 / 10%);
+    border-radius: 100px;
+    transition: all linear 0.2s;
+}
+
+.notice_contents:hover {
+    color: white;
+    background-color: #F9AD19;
+    transform: scale(1.02);
+}
+
+.notice_header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.notice_header > span:nth-child(1) {
+    font-size: 15px;
+    margin-right: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.notice_header > span:nth-child(2) {
+    font-size: 12px;
+    color: rgb(93, 93, 93);
+}
+
+.notice_contents > div {
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@media (max-width: 1250px) {
+    #notice_body {
+        height: 237px;
+    }
+
+    .notice_gradient_top, .notice_gradient_bottom {
+        height: 60px;
+    }
+}

@@ -14,3 +14,16 @@
 #page {
     margin: 20px 50px;
 }
+
+@media (max-width: 850px) {
+    #page {
+        margin: 0px;
+        overflow: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    #page::-webkit-scrollbar {
+        display: none;
+    }
+}

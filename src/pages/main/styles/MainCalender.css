@@ -1,11 +1,13 @@
 /* 작성자: 구현우 */
 
 #MainCalender {
+    height: calc(100% - 60px);
     padding: 30px;
     position: relative;
 }
 
 #calender_title {
+    height: 39.38px;
     font-size: 25px;
     font-weight: bold;
     display: flex;
@@ -13,22 +15,29 @@
     margin-bottom: 30px;
 }
 
-#calender_title > span {
+#calender_title > span:nth-child(1) {
     font-size: 30px;
-    margin-right: 8px;
+    margin-right: 10px
+}
+
+#MainCalender > :nth-child(2) {
+    height: calc(100% - 60px);
+    display: flex;
+    flex-direction: column;
 }
 
 #calender_header {
     width: 100%;
+    height: 20px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(7, 1fr);
 }
 
 #calender_header_element {
     font-size: 10px;
     font-weight: bold;
     width: 99%;
-    height: 20px;
+    height: 100%;
     border-radius: 3px;
     display: flex;
     align-items: center;
@@ -37,14 +46,15 @@
 
 #calender_body {
     width: 100%;
+    flex-grow: 1;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(5, 20%);
     position: relative;
 }
 
 #calender_body_element {
     background-color: white;
-    height: 70px;
     box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.2);
     border-radius: 3px;
     padding: 5px;
@@ -58,7 +68,6 @@
 }
 
 #calender_body_element:hover {
-    overflow: scroll;
     box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.2);
     transform: scale(1.5);
     z-index: 999;
