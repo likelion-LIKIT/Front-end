@@ -8,10 +8,10 @@ export const formText = {
 };
 
 export const tagAddText = {
-  h1: "#",
-  h2: "##",
-  h3: "###",
-  h4: "####",
+  h1: "# ",
+  h2: "## ",
+  h3: "### ",
+  h4: "#### ",
   b: "**",
   i: "_",
 };

@@ -4,12 +4,12 @@ import "../styles/FormHeader.css";
 import { formText } from "../constant/Form";
 import { useNavigate } from "react-router-dom";
 
-const FormHeader = ({ page }) => {
+const FormHeader = ({ page, setShowModal }) => {
   const navigate = useNavigate();
 
   const handleQuit = () => {
     /**
-     * todo: 나가기 전 모달 추가
+     * @todo: 나가기 전 모달 추가
      */
 
     navigate(`/${page}`);
@@ -17,9 +17,10 @@ const FormHeader = ({ page }) => {
 
   const handleWrite = () => {
     /**
-     * todo: 글 작성 API 연결
-     * todo: 작성 확인 모달 추가
+     * @todo: 글 작성 API 연결
+     * @todo: 작성 확인 모달 추가
      */
+    setShowModal(true);
   };
 
   return (

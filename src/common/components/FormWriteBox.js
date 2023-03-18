@@ -57,11 +57,13 @@ const FormWriteBox = ({ page, contents, setContents }) => {
 
   // 이미 적용된 태그인지 확인하는 함수
   function includeTag(start, end, tag) {
+    if (!contents) return;
     const cnt = contents.slice(start, end + 1).split("#").length - 1;
     // 이미 적용되었다면 1 반환
     if (tag === "h1" && cnt === 1) return 1;
     if (tag === "h2" && cnt === 2) return 1;
     if (tag === "h3" && cnt === 3) return 1;
+    if (tag === "h4" && cnt === 4) return 1;
     // 적용이 안되었다면 0 반환
     return 0;
   }
@@ -74,6 +76,10 @@ const FormWriteBox = ({ page, contents, setContents }) => {
 
     // 양 사이드로 태그 처리
     if (tag === "b" || tag === "i") {
+      // 글자 없는 경우 추가
+      if (!draggedText) {
+        draggedText = "텍스트";
+      }
       draggedText += `${tagAddText[`${tag}`]}`;
     }
 
@@ -84,6 +90,13 @@ const FormWriteBox = ({ page, contents, setContents }) => {
     } else {
       if (draggedText.includes("#")) {
         draggedText = draggedText.replaceAll("#", "");
+
+        // 앞에 생기는 공백 제거
+        while (1) {
+          if (draggedText[0] === " ")
+            draggedText = draggedText.split("").splice(1).join("");
+          else break;
+        }
       }
 
       // 현재 textArea에서 보이는 값
