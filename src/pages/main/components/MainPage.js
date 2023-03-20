@@ -6,7 +6,7 @@ import MainNotice from "./MainNotice";
 import MainQuick from "./MainQuick";
 import MainTitle from "./MainTitle";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 import "../styles/MainPage.css";
 
@@ -21,7 +21,7 @@ const MainPage = () => {
 
   return (
     <div id="MainPage">
-      <Layout page="main" id="MainPage_Layout">
+      <Layout page="main">
         <div className="main_box">
           <div id="main_layout">
             <div id="main_layout_left">
