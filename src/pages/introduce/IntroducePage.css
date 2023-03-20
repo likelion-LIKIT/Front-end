@@ -1,0 +1,84 @@
+#IntroducePage {
+    width: 100%;
+    height: 100%;
+}
+
+#Introduce_Layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#Introduce_Layout > div {
+    max-width: 1000px;
+    height: auto;
+    margin: 50px 0;
+}
+
+#introduce_body {
+    margin: 100px 0;
+}
+
+.introduce_init {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    margin-bottom: 60px;
+    opacity: 0;
+    margin-top: -10px;
+    transition: all 0.8s linear;
+}
+
+.introduce_show {
+    opacity: 1;
+    margin-top: 0;
+}
+
+.introduce_init > span:nth-child(1) {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.introduce_init > span:nth-child(2) {
+    font-size: 16px;
+    font-weight: 600;
+    word-break: keep-all;
+    line-height: 30px;
+}
+
+.introduce_init > span:nth-child(2) > span {
+    color: #F5B100;
+    font-style: italic;
+}
+
+#univ_box {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#univ_box > div {
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+    word-break: keep-all;
+    box-shadow: 1px 1px 16px 0 rgb(33 34 34 / 10%);
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 30px;
+    border-radius: 15px;
+}
+
+#univ_box > div > span {
+    color: #F5B100;
+    font-weight: bold;
+}
+
+@media (max-width: 800px) {
+    #univ_box > div {
+        width: 95%;
+    }
+}
