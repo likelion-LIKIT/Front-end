@@ -1,0 +1,77 @@
+/* 작성자: 구현우 */
+
+#OrganizationBox_header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 22px;
+    padding: 10px 15px;
+    border-bottom: 1px solid rgb(225, 225, 225);
+}
+
+#OrganizationBox_header > div:nth-child(2) {
+    font-style: italic;
+}
+
+#OrganizationBox_body {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#OrganizationBox_body > div {
+    margin-bottom: 30px;
+}
+
+#OrganizationBox_body > div > div:nth-child(1) {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+#OrganizationBox_body > div > div:nth-child(2) {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#organization_member {
+    margin: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#organization_member > div:nth-child(1) {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 1px 1px 16px 0 rgb(33 34 34 / 10%);
+    transition: all linear 0.2s;
+}
+
+#organization_member > div:nth-child(1):hover {
+    transform: scale(1.1);
+}
+
+#organization_member > div:nth-child(1) > img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+#organization_member > div:nth-child(2) {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#organization_member > div:nth-child(3) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 5px;
+}
