@@ -21,8 +21,8 @@ const AccountBookPage = () => {
 
   return (
     <div className="AccountBookPage">
-      <Layout page="notice">
-        <Title page="accountBook" />
+      <Layout page="accountBook">
+        <Title page="accountBook"/>
         <ContentsFrame page="accountBook">
           {accountBookData.map((data, idx) => (
             <AccountBookCard key={idx} data={data} />

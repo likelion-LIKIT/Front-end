@@ -3,8 +3,7 @@
 import { useEffect, useState } from "react";
 
 import "../styles/Navbar.css";
-import { notShowPage } from "../constant/Navbar";
-import { category } from "../constant/Navbar";
+import { notShowPage, category, introduceSubCategory, noticeSubCategory, activitySubCategory} from "../constant/Navbar";
 import Link from "./Link";
 
 const Navbar = ({ page }) => {
@@ -15,20 +14,32 @@ const Navbar = ({ page }) => {
     onMouseLeave: () => setIsHovering(false),
   };
 
+  const setMainCategory = () => {
+    if(introduceSubCategory.includes(page)) {
+      return 'introduce';
+    } else if(noticeSubCategory.includes(page)) {
+      return 'notice';
+    } else if(activitySubCategory.includes(page)) {
+      return 'activity';
+    }
+  }
+
+  const mainCategory = setMainCategory();
+
   const makeCategory = () => {
-    return Object.entries(category[page].category).map((page, idx) => (
-      <Link key={idx} to={`/${page[0]}`}>
-        &nbsp;&nbsp;&nbsp;{page[1]}
+    return Object.entries(category[mainCategory].category).map((data, idx) => (
+      <Link key={idx} to={`/${data[0]}`} page={page}>
+        &nbsp;&nbsp;&nbsp;{data[1]}
       </Link>
     ));
   };
 
   const makeNavBar = () => {
-    if (category[page]) {
+    if (category[mainCategory]) {
       return (
         <>
           <div className="navTitle">
-            &nbsp;&nbsp;&nbsp;{category[page].title}
+            &nbsp;&nbsp;&nbsp;{category[mainCategory].title}
           </div>
           <div className="navCategory">{makeCategory()}</div>
         </>
