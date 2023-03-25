@@ -7,7 +7,7 @@ import { category } from "../constant/CategoryData";
 import FileListBox from "../../../../common/components/FileListBox";
 import FileUploadBtn from "../../../../common/components/FileUploadBtn";
 
-const NotionFormModal = ({ show, onHide }) => {
+const NoticeUploadModal = ({ show, onHide }) => {
   const categoryBtnRef = useRef([]);
   const [clickedCategory, setClickedCategory] = useState(-1); // 선택된 카테고리 인덱스
   const [file, setFile] = useState([]);
@@ -76,7 +76,7 @@ const NotionFormModal = ({ show, onHide }) => {
   };
 
   return (
-    <div className="NotionFormModal">
+    <div className="NoticeUploadModal">
       <Modal show={show} onHide={onHide} width={"600px"} height={"600px"}>
         {show && (
           <div className="notionModalBody">
@@ -115,4 +115,4 @@ const NotionFormModal = ({ show, onHide }) => {
   );
 };
 
-export default NotionFormModal;
+export default NoticeUploadModal;
