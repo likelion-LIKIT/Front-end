@@ -11,7 +11,7 @@ const AccountBookCard = (props) => {
   return (
     <div
       className="AccountBookCard"
-      onClick={() => navigate(`/notice/accountBook/${data.id}`)}
+      onClick={() => navigate(`/accountBook/detail/${data.id}`)}
     >
       <div className="accountBookCardTitle">💸 {data.month}월 회계장부</div>
       <div className="accountBookCardDate">

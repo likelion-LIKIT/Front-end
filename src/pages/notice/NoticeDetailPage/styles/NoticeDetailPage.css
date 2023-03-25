@@ -1,28 +1,28 @@
 /* 작성자 : 이수화 */
 
-.noticeDetailTop {
+.detailTop {
     display: grid;
     grid-template-columns: 5fr 1fr;
     margin: 15px 0px;  
 }
 
-.noticeDetailCategory span:nth-child(1) {
+.detailCategory span:nth-child(1) {
     margin-right: 5px;
 }
 
-.noticeDetailCategory span:nth-child(2) {
+.detailCategory span:nth-child(2) {
     padding: 3px 12px;
     border-radius: 5px;
     box-shadow: 1px 1px 10px rgb(0, 0, 0, 0.1);
     font-weight: 600;
 }
 
-.noticeDetailBtns {
+.detailBtns {
     display: flex;
     justify-content: flex-end;
 }
 
-.noticeDetailBtns span:hover {
+.detailBtns span:hover {
     border-bottom: 1px solid black;
     cursor: pointer;
 }

@@ -11,7 +11,7 @@ const AssignmentCard = (props) => {
   return (
     <div
       className="AssignmentCard"
-      onClick={() => navigate(`/notice/assignment/${data.id}`)}
+      onClick={() => navigate(`/assignment/detail/${data.id}`)}
     >
       <div className="assignmentCardTrack">
         <span style={{ color: `${trackFontColor[`${data.track}`]}` }}>
