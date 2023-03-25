@@ -13,6 +13,8 @@
 
 #page {
     padding: 20px 50px;
+    margin: 0 auto;
+    max-width: 1440px;
 }
 
 @media (max-width: 850px) {

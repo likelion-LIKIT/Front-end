@@ -3,7 +3,7 @@
 .AssignmentCard {
     width: calc(100% - 80px);
     min-width: 200px;
-    height: 15vh;
+    height: 100px;
     margin: 20px;
     padding: 20px;
     display: flex;

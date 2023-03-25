@@ -51,7 +51,11 @@ const ActivityFrame = () => {
   function getCardWidth() {
     // 카드 하나 넓이 : 일단 윈도우 넓이의 20%로 지정
     let scrollWidth = 17;
-    let width = parseInt((windowWidth - 140 - scrollWidth) / 5);
+
+    let width = parseInt((windowWidth - 120 - scrollWidth) / 5);
+    if(windowWidth > 1440) {
+      width = parseInt((1440 - 20 - scrollWidth) / 5);
+    }
     if (width < 100) width = 100; // 최소 100px로 고정
     return width + 1;
   }
@@ -100,7 +104,7 @@ const ActivityFrame = () => {
         className="activityContainer"
         style={{
           width: `${cardWidth * showData.length}px`,
-          transform: `translateX(${-1 * cardWidth * currentIdx}px)`,
+          transform: `translateX(${-1 * cardWidth * currentIdx + 20}px)`,
           transition: transitionStyle,
         }}
       >

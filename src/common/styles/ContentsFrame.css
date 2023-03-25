@@ -16,3 +16,31 @@
     opacity: 1;
     transform: translateY(0px);
 }
+
+@media ( max-width: 1250px ) {
+    .ContentsFrame {
+        width: calc(100% - 200px);
+        margin: 50px 100px;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media ( max-width: 1000px ) {
+    .ContentsFrame {
+        width: calc(100% - 100px);
+        margin: 50px;
+    }
+}
+
+@media ( max-width: 750px ) {
+    .ContentsFrame {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media ( max-width: 670px ) {
+    .ContentsFrame {
+        width: 100%;
+        margin: 50px 0px;
+    }
+}
