@@ -40,7 +40,7 @@ const OrganizationPage = () => {
 
   return (
     <div className="OrganizationPage">
-      <Layout page="introduce">
+      <Layout page="organization">
         <div id="Organization_Layout">
           <div>
             <Title page="organization"></Title>

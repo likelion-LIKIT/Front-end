@@ -39,3 +39,7 @@ export const category = {
     'notice': notice,
     'activity': activity 
 };
+
+export const introduceSubCategory = ['introduce', 'organization', 'development'];
+export const noticeSubCategory = ['regulation', 'notice', 'assignment', 'accountBook'];
+export const activitySubCategory = ['activity'];

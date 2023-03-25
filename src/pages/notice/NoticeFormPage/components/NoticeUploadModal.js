@@ -1,7 +1,7 @@
 // 작성자 : 이수화
 
 import { useState, useRef } from "react";
-import "../styles/NotionFormModal.css";
+import "../styles/NoticeUploadModal.css";
 import Modal from "../../../../common/components/Modal";
 import { category } from "../constant/CategoryData";
 import FileListBox from "../../../../common/components/FileListBox";

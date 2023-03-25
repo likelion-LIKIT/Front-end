@@ -4,10 +4,10 @@ import { useNavigate } from "react-router-dom";
 
 const Link = (props) => {
     const navigate = useNavigate();
-    const { children, to } = props;
+    const { children, to, page } = props;
 
     return (
-        <div id='link' onClick={() => {navigate(to)}}>
+        <div id='link' onClick={() => {navigate(to)}} className={[`${`/${page}` === to ? 'clicked' : null}`].join('')}>
             {children}
         </div>
     );

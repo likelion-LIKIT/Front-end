@@ -7,7 +7,7 @@ import ContentsFrame from "../../../common/components/ContentsFrame";
 const RegulationPage = () => {
   return (
     <div className="RegulationPage">
-      <Layout page="notice">
+      <Layout page="regulation">
         <Title page="regulation" />
         <ContentsFrame page="regulation">
           {/* todo: 회칙 사진 넣기 */}

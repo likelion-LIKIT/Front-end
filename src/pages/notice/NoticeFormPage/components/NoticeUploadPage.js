@@ -1,13 +1,13 @@
 // 작성자 : 이수화
 
 import { useState, useEffect } from "react";
-import "../styles/NoticeFormPage.css";
+import "../styles/NoticeUploadPage.css";
 import FormHeader from "../../../../common/components/FormHeader";
 import FormTitle from "../../../../common/components/FormTitle";
 import FormWriteBox from "../../../../common/components/FormWriteBox";
 import Preview from "../../../../common/components/Preview";
 import { MarkDownParser } from "../utils/MarkDownParser";
-import NotionFormModal from "./NotionFormModal";
+import NotionFormModal from "./NoticeUploadModal";
 
 const NoticeFormPage = () => {
   const [title, setTitle] = useState();
