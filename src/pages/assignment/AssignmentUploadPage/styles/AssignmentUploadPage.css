@@ -1,0 +1,26 @@
+/* 작성자 : 이수화 */
+
+.AssignmentUploadPage {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.assignUploadMain, .noticeFormPreView {
+    width: 50%;
+    overflow-y: scroll;
+}
+
+.assignUploadMain {
+    overflow-x: hidden;
+}
+
+@media ( max-width: 900px ) {
+    .assignUploadMain {
+        width: 100%;
+    }
+
+    .noticeFormPreView {
+        width: 0%;
+    }
+}
