@@ -1,13 +1,13 @@
 /* 작성자 : 이수화 */
 
 .Title {
-    width: calc(100% - 40px);
+    width: calc(100% - 100px);
     display: flex;
-    margin: 0 20px;
+    margin: 20px 50px;
 }
 
 .titleBox {
-    width: 80%;
+    width: calc(100% - 130px);
 }
 
 .titleParent, .subtitleParent {
@@ -38,7 +38,7 @@
 }
 
 .writeBtn {
-    width: 20%;
+    /* width: 20%; */
     display: flex;
     justify-content: center;
     align-items: center;
