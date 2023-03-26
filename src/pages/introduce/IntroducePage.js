@@ -22,8 +22,8 @@ const IntroducePage = () => {
         <div id="Introduce_Layout">
           <div>
             <Title page="introduce" />
-            <div id="introduce_body">
-              <div className={["introduce_init", frameState && "introduce_show"].join(" ")}>
+            <div className={["init_introduce", frameState && "introduce_body"].join(" ")}>
+              <div className="introduce_secction">
                 <span>🦁 멋쟁이 사자처럼이란? </span>
                 <span>
                   ‘멋쟁이사자처럼’은 현재 국내에서 가장 많은 학생들이 활동하고 있는
@@ -38,7 +38,7 @@ const IntroducePage = () => {
                   입니다.
                 </span>
               </div>
-              <div className={["introduce_init", frameState && "introduce_show"].join(" ")}>
+              <div className="introduce_secction">
                 <span>👀 어떤 활동을 하나요?</span>
                 <span>
                   ‘멋쟁이사자처럼’은
@@ -61,7 +61,7 @@ const IntroducePage = () => {
                   진행합니다.
                 </span>
               </div>
-              <div className={["introduce_init", frameState && "introduce_show"].join(" ")}>
+              <div className="introduce_secction">
                 <span>🐥 멋쟁이 사자처럼의 시작은?</span>
                 <span>
                   멋쟁이사자처럼의 시작으로 2013년 서울대학교 30명의 학생들에게
@@ -82,7 +82,7 @@ const IntroducePage = () => {
                   되었습니다. (2021년 1월 누적)
                 </span>
               </div>
-              <div className={["introduce_init", frameState && "introduce_show"].join(" ")}>
+              <div className="introduce_secction">
                 <span>🛤️️ 무슨 트랙이 있나요?</span>
                 <span>
                   올해(2022)는 전 기수와 다르게,
@@ -99,7 +99,7 @@ const IntroducePage = () => {
                   예정입니다.
                 </span>
               </div>
-              <div className={["introduce_init", frameState && "introduce_show"].join(" ")}>
+              <div className="introduce_secction">
                 <span>🏫 참가 대학은?</span>
                 <span>
                   올해(2022) ‘멋쟁이사자처럼 대학’에는

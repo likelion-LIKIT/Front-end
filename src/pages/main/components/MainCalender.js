@@ -5,16 +5,13 @@ import ScheduleUtils from "../utils/ScheduleUtils";
 
 import "../styles/MainCalender.css";
 import { useEffect, useState } from "react";
-import ScheduleModal from "./ScheduleModal";
 
-const MainCalender = () => {
+const MainCalender = ({ setShowScheduleModal }) => {
   const [dateState, setDateState] = useState({});
   const [scheduleState, setScheduleState] = useState({});
 
   const [clickBtn, setClickBtn] = useState(false);
   const [directionBtn, setDirectionBtn] = useState("");
-
-  const [showScheduleModal, setShowScheduleModal] = useState(false);
 
   useEffect(() => {
     if (dateState.monthList) {
@@ -165,13 +162,6 @@ const MainCalender = () => {
           </div>
         </div>
       </div>
-
-      <ScheduleModal
-        show={showScheduleModal}
-        onHide={() => setShowScheduleModal(showScheduleModal && !showScheduleModal)}
-        width={"500px"}
-        height={"500px"}
-      />
     </>
   );
 };

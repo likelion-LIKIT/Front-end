@@ -5,7 +5,7 @@ import { title, showWriteBtnPage } from "../constant/Title";
 import { useNavigate } from "react-router-dom";
 
 const Title = (props) => {
-  const { page } = props;
+  const { page, name } = props;
   const navigate = useNavigate();
 
   return (
@@ -15,7 +15,10 @@ const Title = (props) => {
           <div className="titleChild">{title[`${page}`][0]}</div>
         </div>
         <div className="subtitleParent">
-          <div className="subtitleChild">{title[`${page}`][1]}</div>
+          <div className="subtitleChild">
+            {name && name}
+            {title[`${page}`][1]}
+          </div>
         </div>
       </div>
       {showWriteBtnPage.includes(page) ? (
