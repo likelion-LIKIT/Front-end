@@ -1,0 +1,102 @@
+/* 작성자: 구현우 */
+
+#MyProfile {
+    width: 100%;
+}
+
+#MyProfile_image {
+    width: 160px;
+    height: 160px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 10px 0 rgb(33 34 34 / 10%);
+    position: relative;
+}
+
+#MyProfile_image > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(50, 50);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: auto;
+    border-radius: 15px;
+}
+
+
+.MyProfile_image_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    width: auto;
+    padding: 0 10px;
+    height: 40px;
+    border-radius: 20px;
+    margin-top: -7px;
+    background-color: white;
+    border: none;
+    box-shadow: 1px 1px 5px 0 rgb(33 34 34 / 30%);
+    position: absolute;
+    top: 80%;
+    right: -5%;
+    transition: all linear 0.2s;
+}
+
+.MyProfile_image_btn > div:nth-child(2) {
+    font-size: 20px;
+    cursor: pointer;
+    transition: all linear 0.2s;
+}
+
+.MyProfile_image_btn > div:nth-child(3) {
+    font-size: 13px;
+    margin-left: 7px;
+    cursor: pointer;
+    transition: all linear 0.2s;
+}
+
+.MyProfile_image_btn > div:nth-child(2):hover, .MyProfile_image_btn > div:nth-child(3):hover {
+    transform: scale(1.1);
+}
+
+#MyProfile_image:hover .MyProfile_image_btn {
+    opacity: 1;
+    pointer-events: all;
+}
+
+#MyProfile_body > div {
+    font-size: 15px;
+    margin-top: 8px;
+}
+
+#MyProfile_body > div:nth-child(2) {
+    font-weight: bold;
+}
+
+#MyProfile_body > div:nth-child(1) {
+    font-weight: bold;
+    font-size: 24px;
+    border-bottom: 1px solid rgb(210, 210, 210);
+    padding: 20px 0 10px 0;
+    margin-bottom: 10px;
+}
+
+#MyProfile_body > button {
+    width: 140px;
+    margin-top: 20px;
+    font-size: 12px;
+    border-radius: 70px;
+    padding: 5px 0;
+    border: none;
+    background-color: rgb(44, 44, 44);
+    color: white;
+    font-weight: bold;
+    transition: all linear 0.2s;
+}
+
+#MyProfile_body > button:hover {
+    transform: scale(1.02);
+}

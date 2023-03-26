@@ -1,0 +1,51 @@
+/* 작성자: 구현우 */
+
+#MyPage {
+    width: 100%;
+    height: 100%;
+}
+
+#my_layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#my_layout > div {
+    width: 1000px;
+    height: auto;
+    margin: 50px 0;
+}
+
+.my_init {
+    margin: 60px 20px;
+    opacity: 0;
+    transition: all 0.8s linear;
+}
+
+.my_body {
+    margin: 50px 20px;
+    opacity: 1;
+}
+
+.my_init > div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.my_init > div > div:nth-child(1) {
+    width: 200px;
+    padding: 10px 40px 10px 20px;
+}
+
+.my_init > div > div:nth-child(2) {
+    width: 800px;
+    padding: 10px 20px 10px 40px;
+}
+
+.my_init > div > div:nth-child(2) > div {
+    margin-bottom: 30px;
+}
