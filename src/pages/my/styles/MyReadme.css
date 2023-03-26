@@ -1,0 +1,58 @@
+/* 작성자: 구현우 */
+
+#MyReadme {
+    width: 100%;
+}
+
+#MyReadme > div:nth-child(1) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#MyReadme > div:nth-child(1) > div {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#MyReadme > div:nth-child(1) > div:nth-child(2) > button {
+    border: none;
+    background-color: transparent;
+    color: rgb(168, 168, 168);
+    font-weight: bold;
+    font-size: 15px;
+    transition: all linear 0.2s;
+}
+
+#MyReadme > div:nth-child(1) > div:nth-child(2) > button:hover {
+    color: black;
+}
+
+#MyReadme > div:nth-child(2) {
+    width: 672px;
+    padding: 20px;
+    box-shadow: 1px 1px 10px 0 rgb(33 34 34 / 10%);
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+#MyReadme > div:nth-child(2) > textarea {
+    font-family: 'SUIT-Regular';
+    border: none;
+    outline: none;
+    cursor: pointer;
+    word-wrap: normal;
+    width: 100%;
+    height: auto;
+    font-size: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(231, 231, 231);
+    resize : vertical;
+}
+
+#readme_text_count {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 3px;
+}

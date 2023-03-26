@@ -1,0 +1,43 @@
+/* 작성자: 구현우 */
+
+#MyTechnology {
+    width: 100%;
+}
+
+#MyTechnology > div:nth-child(1) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#MyTechnology > div:nth-child(1) > div {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#MyTechnology > div:nth-child(1) > button {
+    border: none;
+    background-color: transparent;
+    color: rgb(168, 168, 168);
+    font-weight: bold;
+    font-size: 15px;
+    transition: all linear 0.2s;
+}
+
+#MyTechnology > div:nth-child(1) > button:hover {
+    color: black;
+}
+
+#MyTechnology > div:nth-child(2) {
+    width: 672px;
+    padding: 20px;
+    box-shadow: 1px 1px 10px 0 rgb(33 34 34 / 10%);
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+#MyTechnology > div:nth-child(2) > img {
+    margin: 2px;
+    border-radius: 5px;
+}

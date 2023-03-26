@@ -1,0 +1,49 @@
+/* 작성자: 구현우 */
+
+#MyProjects {
+    width: 100%;
+}
+
+#MyProjects > div:nth-child(1) {
+    margin-bottom: 20px;
+}
+
+#MyProjects > div:nth-child(1) > div {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#MyProjects > div:nth-child(2) {
+    width: 672px;
+    padding: 10px 20px;
+    box-shadow: 1px 1px 10px 0 rgb(33 34 34 / 10%);
+    border-radius: 10px;
+    font-size: 15px;
+    display: flex;
+}
+
+#MyProjects > div:nth-child(2) > div {
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    position: relative;
+    border-radius: 10%;
+    box-shadow: 1px 1px 5px 0 rgb(33 34 34 / 20%);
+    overflow: hidden;
+    transition: all linear 0.2s;
+}
+
+#MyProjects > div:nth-child(2) > div:hover {
+    transform: scale(1.1);
+}
+
+#MyProjects > div:nth-child(2) > div > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(50, 50);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: auto;
+}
