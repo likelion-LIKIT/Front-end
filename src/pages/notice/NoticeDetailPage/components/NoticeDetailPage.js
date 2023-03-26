@@ -45,8 +45,8 @@ const NoticeDetailPage = () => {
     <div className="NoticeDetailPage">
       <Layout page="notice">
         <div className="postFrame">
-          <div className="noticeDetailTop">
-            <div className="noticeDetailCategory">
+          <div className="detailTop">
+            <div className="detailCategory">
               <span>{noticeCategoryIcon[`${data.category}`]}</span>
               <span
                 style={{
@@ -56,7 +56,7 @@ const NoticeDetailPage = () => {
                 {data.category}
               </span>
             </div>
-            <div className="noticeDetailBtns">
+            <div className="detailBtns">
               <span>수정</span>
               &nbsp;&nbsp;&nbsp;
               <span onClick={handleDelete}>삭제</span>

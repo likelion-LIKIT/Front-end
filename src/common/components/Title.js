@@ -20,7 +20,7 @@ const Title = (props) => {
       </div>
       {showWriteBtnPage.includes(page) ? (
         <div className="writeBtn">
-          <button onClick={() => navigate(`/${page}/form`)}>작성하기</button>
+          <button onClick={() => navigate(`/${page}/upload`)}>작성하기</button>
         </div>
       ) : null}
     </div>

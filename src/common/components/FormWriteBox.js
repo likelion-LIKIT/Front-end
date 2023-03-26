@@ -134,7 +134,7 @@ const FormWriteBox = ({ page, contents, setContents }) => {
       <div className="formTextArea">
         <textarea
           ref={textAreaRef}
-          placeholder={`${formText[`${page}`]}를 작성해보세요`}
+          placeholder={`${formText[`${page}`]}을(를) 작성해보세요`}
           onChange={handleChange}
         />
       </div>

@@ -21,7 +21,7 @@ const AssignmentPage = () => {
   
   return (
     <div className="AssignmentPage">
-      <Layout page="notice">
+      <Layout page="assignment">
         <Title page="assignment" />
         <ContentsFrame page="assignment">
           {assignmentData.map((data, idx) => (

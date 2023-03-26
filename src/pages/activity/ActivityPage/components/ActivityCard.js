@@ -85,7 +85,7 @@ const ActivityCard = (props) => {
       onClick={() => navigate(`/activity/detail/${data.id}`)}
     >
       <div className="activityCardInfo">
-        <img src="/images/default_image.png" alt="활동 일지 썸네일 이미지" />
+        <div className='activityCardImg'><img src="/images/default_image.png" alt="활동 일지 썸네일 이미지" /></div>
         <div className="activityPostInfo">
           <div>{data.title}</div>
           <div>{data.date}</div>

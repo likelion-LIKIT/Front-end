@@ -1,0 +1,26 @@
+/* 작성자 : 이수화 */
+
+.ActivityUploadPage {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.activityFormMain, .activityFormPreView {
+    width: 50%;
+    overflow-y: scroll;
+}
+
+.activityFormMain {
+    overflow-x: hidden;
+}
+
+@media ( max-width: 900px ) {
+    .activityFormMain {
+        width: 100%;
+    }
+
+    .activityFormPreView {
+        width: 0%;
+    }
+}

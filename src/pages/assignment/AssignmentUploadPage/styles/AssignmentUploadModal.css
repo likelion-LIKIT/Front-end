@@ -1,0 +1,130 @@
+/* 작성자 : 이수화 */
+
+.assignmentModalBody {
+    width: 100%;
+    height: 100%;
+}
+
+.assignmentModalHeader {
+    width: calc(100% - 50px);
+    height: 60px;
+    margin: 0px 25px;
+    border-bottom: 1px solid #b3b3b37e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.assignmentModalHeader strong {
+    font-size: 20px;
+}
+
+.assignmentModalHeader span:hover {
+    cursor: pointer;
+}
+
+.assignmentModalTrack, .assignmentModalFileUploader , .assignmentModalMonth {
+    width: calc(100% - 80px);
+    margin: 15px 40px;
+}
+
+.assignmentModalTrack, .assignmentModalMonth {
+    height: 70px;
+}
+
+.assignmentModalTrack .show, .assignmentModalMonth .show  {
+    font-size: 13px;
+    line-height: 16px;
+}
+
+.assignmentModalTrack span, .assignmentModalMonth span  {
+    color: red;
+}
+
+.assignmnetMonthInput {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.assignmnetMonthInput input {
+    height: 30px;
+    border: none;
+    border-bottom: 1.5px solid rgb(210, 210, 210);
+    outline: none;
+    font-family: 'SUIT-Regular';
+}
+
+.assignmentTrackBtns {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 8px 0px;
+}
+
+.assignmentTrackBtns div {
+    width: 90px;
+    height: 35px;
+    margin: 5px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(129, 129, 129, 0.2);
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.assignmentTrackBtns div:hover {
+    cursor: pointer;
+}
+
+.assignmentModalFileUploader {
+    height: calc(100% - 310px);
+}
+
+.assignmentModalFileUploaderBox {
+    width: 100%;
+    height: 85%;
+    margin: 5% 0%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.assignmentModalBtns {
+    height: 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 10px;
+}
+
+.assignmentModalBtns button {
+    width: 80px;
+    height: 35px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 3px;
+    font-weight: bold;
+    color: white;
+    font-size: 16px;
+    font-family: 'SUIT-Regular';
+}
+
+.assignmentModalBtns button:hover {
+    cursor: pointer;
+}
+
+.assignmentModalBtns #cancel {
+    background-color: #D9D9D9;
+}
+
+.assignmentModalBtns #cancel:hover {
+    background-color: #b3b3b3;
+}
+
+.assignmentModalBtns #write {
+    background-color: #FFC736;
+}
+
+.assignmentModalBtns #write:hover {
+    background-color: #FFB800;
+}

@@ -1,0 +1,26 @@
+/* 작성자 : 이수화 */
+
+.AccountBookUploadPage {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.accountBookUploadMain, .accountBookUploadPreView {
+    width: 50%;
+    overflow-y: scroll;
+}
+
+.accountBookUploadMain {
+    overflow-x: hidden;
+}
+
+@media ( max-width: 900px ) {
+    .accountBookUploadMain {
+        width: 100%;
+    }
+
+    .accountBookUploadPreView {
+        width: 0%;
+    }
+}
