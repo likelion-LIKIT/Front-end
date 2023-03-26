@@ -18,39 +18,39 @@
     margin: 50px 0;
 }
 
-#introduce_body {
-    margin: 100px 0;
+.init_introduce {
+    margin: 110px 0;
+    opacity: 0;
+    transition: all 0.8s linear;
 }
 
-.introduce_init {
+.introduce_body {
+    margin: 100px 0;
+    opacity: 1;
+}
+
+.introduce_secction {
     display: flex;
     flex-direction: column;
     text-align: right;
     margin-bottom: 60px;
-    opacity: 0;
-    margin-top: -10px;
-    transition: all 0.8s linear;
+    
 }
 
-.introduce_show {
-    opacity: 1;
-    margin-top: 0;
-}
-
-.introduce_init > span:nth-child(1) {
+.introduce_secction > span:nth-child(1) {
     font-size: 20px;
     margin-bottom: 15px;
     font-weight: bold;
 }
 
-.introduce_init > span:nth-child(2) {
+.introduce_secction > span:nth-child(2) {
     font-size: 16px;
     font-weight: 600;
     word-break: keep-all;
     line-height: 30px;
 }
 
-.introduce_init > span:nth-child(2) > span {
+.introduce_secction > span:nth-child(2) > span {
     color: #F5B100;
     font-style: italic;
 }
