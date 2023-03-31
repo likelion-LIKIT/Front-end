@@ -32,6 +32,22 @@ const LoginAPI = {
       sessionStorage.setItem("LIKIT-id", id);
     }
   },
+
+  async checkCurrentPwd(id, password) {
+    let answer = await axios
+      .post(`${process.env.REACT_APP_API_URL}/member/login`, {
+        studentId: id,
+        password: password,
+      })
+      .then(() => {
+        return true;
+      })
+      .catch(() => {
+        return false;
+      });
+
+    return answer;
+  },
 };
 
 export default LoginAPI;
