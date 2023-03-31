@@ -7,6 +7,9 @@ import MyReadme from "./MyReadme";
 import MyTechnology from "./MyTechnology";
 import MyProjects from "./MyProjects";
 import MyUtils from "../utils/MyUtils";
+import MyPasswordModal from "./MyPasswordModal";
+import MyTechnologyModal from "./MyTechnologyModal";
+import UpdatePasswordModal from "../components/UpdatePasswordModal";
 
 import "../styles/MyPage.css";
 
@@ -19,6 +22,10 @@ const MyPage = () => {
   const [frameState, setFrameState] = useState(false);
   const [isMe] = useState(MyUtils.checkIsMe(pageId.student_id));
   const [userInfo, setUserInfo] = useState(MyUtils.setUserInfo(pageId.student_id));
+
+  const [passwordModal, setPasswordModal] = useState(false);
+  const [updatePasswordModal, setUpdatePasswordModal] = useState(false);
+  const [TechnologyModal, setTechnologyModal] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
@@ -35,7 +42,12 @@ const MyPage = () => {
             <div className={["my_init", frameState && "my_body"].join(" ")}>
               <div>
                 <div>
-                  <MyProfile isMe={isMe} setUserInfo={setUserInfo} userInfo={userInfo} />
+                  <MyProfile
+                    isMe={isMe}
+                    setUserInfo={setUserInfo}
+                    userInfo={userInfo}
+                    setPasswordModal={setPasswordModal}
+                  />
                 </div>
                 <div>
                   <div>
@@ -49,9 +61,8 @@ const MyPage = () => {
                   <div>
                     <MyTechnology
                       isMe={isMe}
-                      setUserInfo={setUserInfo}
-                      userInfo={userInfo}
                       tech_stack={userInfo.tech_stack}
+                      setTechnologyModal={setTechnologyModal}
                     />
                   </div>
                   <div>
@@ -63,6 +74,31 @@ const MyPage = () => {
           </div>
         </div>
       </Layout>
+
+      <MyPasswordModal
+        show={passwordModal}
+        onHide={() => setPasswordModal(passwordModal && !passwordModal)}
+        width={"400px"}
+        height={"250px"}
+        setUpdatePasswordModal={setUpdatePasswordModal}
+      />
+
+      <UpdatePasswordModal
+        show={updatePasswordModal}
+        onHide={() => setUpdatePasswordModal(updatePasswordModal && !updatePasswordModal)}
+        width={"400px"}
+        height={"350px"}
+      />
+
+      <MyTechnologyModal
+        show={TechnologyModal}
+        onHide={() => setTechnologyModal(TechnologyModal && !TechnologyModal)}
+        width={"500px"}
+        height={"400px"}
+        setUserInfo={setUserInfo}
+        userInfo={userInfo}
+        tech_stack={userInfo.tech_stack}
+      />
     </div>
   );
 };
