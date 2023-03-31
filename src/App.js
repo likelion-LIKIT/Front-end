@@ -8,7 +8,7 @@ import IntroducePage from "./pages/introduce/IntroducePage";
 import OrganizationPage from "./pages/organization/components/OrganizationPage";
 import DevelopmentPage from "./pages/development/DevelopmentPage";
 import DevelopmentUploadPage from "./pages/development/DevelopmentUploadPage";
-import MyPage from "./pages/my/MyPage";
+import MyPage from "./pages/my/components/MyPage";
 import NoticePage from "./pages/notice/NoticePage/components/NoticePage";
 import ActivityPage from "./pages/activity/ActivityPage/components/ActivityPage";
 import RegulationPage from "./pages/regulation/components/RegulationPage";
@@ -19,9 +19,9 @@ import ActivityDetailPage from "./pages/activity/ActivityDetailPage/components/A
 import AssignMentDetailPage from "./pages/assignment/AssignmentDetailPage/components/AssignmentDetailPage";
 import AccountBookDetailPage from "./pages/accountBook/AccountBookDetailPage/components/AccountBookDetailPage";
 import NoticeUploadPage from "./pages/notice/NoticeFormPage/components/NoticeUploadPage";
-import ActivityUploadPage from './pages/activity/ActivityUploadPage/components/ActivityUploadPage';
-import AssignMentUploadPage from './pages/assignment/AssignmentUploadPage/components/AssignmentUploadPage';
-import AccountBookUploadPage from './pages/accountBook/AccountBookUploadPage/components/AccountBookUploadPage';
+import ActivityUploadPage from "./pages/activity/ActivityUploadPage/components/ActivityUploadPage";
+import AssignMentUploadPage from "./pages/assignment/AssignmentUploadPage/components/AssignmentUploadPage";
+import AccountBookUploadPage from "./pages/accountBook/AccountBookUploadPage/components/AccountBookUploadPage";
 
 import "./App.css";
 
@@ -35,7 +35,7 @@ const App = () => {
         <Route path="/organization" element={<OrganizationPage />} />
         <Route path="/development" element={<DevelopmentPage />} />
         <Route path="/development/upload" element={<DevelopmentUploadPage />} />
-        <Route path="/my" element={<MyPage />} />
+        <Route path="/my/:student_id" element={<MyPage />} />
         <Route path="/notice" element={<NoticePage />} />
         <Route path="/notice/detail/:id" element={<NoticeDetailPage />} />
         <Route path="/notice/upload" element={<NoticeUploadPage />} />

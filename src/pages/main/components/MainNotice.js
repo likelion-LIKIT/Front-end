@@ -37,15 +37,15 @@ const MainNotice = () => {
   const setGradient = () => {
     const noticeBody = document.getElementById("notice_body");
 
-    if (Math.floor(noticeBody.scrollTop) === 0) {
+    if (Math.floor(noticeBody.scrollTop) <= 1) {
       gradientTop.current.style = "background: linear-gradient(transparent, transparent);";
     } else {
       gradientTop.current.style = "background: linear-gradient(white, transparent);";
     }
 
     if (
-      Math.floor(noticeBody.scrollTop + noticeBody.clientHeight) ===
-      Math.floor(noticeBody.scrollHeight)
+      Math.floor(noticeBody.scrollTop + noticeBody.clientHeight) >=
+      Math.floor(noticeBody.scrollHeight) - 1
     ) {
       gradientBottom.current.style = "background: linear-gradient(transparent, transparent);";
     } else {
