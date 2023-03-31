@@ -47,3 +47,15 @@
     object-fit: cover;
     margin: auto;
 }
+
+@media (min-width: 800px) and (max-width: 1050px)  {
+    #MyProjects > div:nth-child(2)  {
+        width: 460px;
+    }
+}
+
+@media (max-width: 800px)  {
+    #MyProjects > div:nth-child(2)  {
+        width: 500px;
+    }
+}

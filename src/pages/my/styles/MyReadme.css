@@ -56,3 +56,16 @@
     justify-content: flex-end;
     margin-bottom: 3px;
 }
+
+@media (min-width: 800px) and (max-width: 1050px)  {
+    #MyReadme > div:nth-child(2) {
+        width: 460px;
+    }
+}
+
+@media (max-width: 800px)  {
+    #MyReadme > div:nth-child(2) {
+        width: 500px;
+    }
+}
+
