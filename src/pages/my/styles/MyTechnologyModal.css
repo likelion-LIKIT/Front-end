@@ -1,0 +1,39 @@
+/* 작성자: 구현우 */
+
+.none_MyTechnologyModal {
+    opacity: 0;
+    transition: all linear 0.2s;
+}
+
+.MyTechnologyModal {
+    opacity: 1;
+}
+
+#mytechnologymodal_body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+#mytechnologymodal_body > div {
+    position: relative;
+}
+
+#mytechnologymodal_body > div > img {
+    margin: 0 2px;
+    border-radius: 5px;
+}
+
+#mytechnologymodal_body > div > div {
+    position: absolute;
+    top: 0;
+    left: 2px;
+    background-color: white;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    opacity: 0.6;
+    transition: all linear 0.4s;
+}

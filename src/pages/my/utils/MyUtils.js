@@ -19,6 +19,10 @@ const MyUtils = {
   updateUserInfro(key, value) {
     MyAPI.updateUserInfo(key, value);
   },
+
+  updateTechStack(updateTech, setUserInfo, userInfo) {
+    MyAPI.updateUserInfo("tech_stack", updateTech, setUserInfo, userInfo);
+  },
 };
 
 export default MyUtils;
