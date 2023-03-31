@@ -49,3 +49,43 @@
 .my_init > div > div:nth-child(2) > div {
     margin-bottom: 30px;
 }
+
+@media (min-width: 800px) and (max-width: 1050px)  {
+    #my_layout > div {
+        width: 800px;
+    }
+
+    .my_init > div > div:nth-child(1) {
+        padding: 10px 20px 10px 10px;
+    }
+
+    .my_init > div > div:nth-child(2) {
+        width: 500px;
+        padding: 10px 10px 10px 20px;
+    }
+}
+
+@media (max-width: 800px)  {
+    .my_init > div {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #my_layout > div {
+        width: 650px;
+    }
+
+    .my_init > div > div:nth-child(1) {
+        width: 650px;
+    }
+
+    .my_init > div > div:nth-child(1) {
+        padding: 10px 20px 10px 10px;
+    }
+
+    .my_init > div > div:nth-child(2) {
+        width: 550px;
+        padding: 10px 10px 10px 20px;
+    }
+}

@@ -1,6 +1,6 @@
 /* 작성자: 구현우 */
 
-#MyProfile {
+.MyProfile {
     width: 100%;
 }
 
@@ -79,7 +79,7 @@
 #MyProfile_body > div:nth-child(1) {
     font-weight: bold;
     font-size: 24px;
-    border-bottom: 1px solid rgb(210, 210, 210);
+    border-bottom: 1px solid rgb(229, 229, 229);
     padding: 20px 0 10px 0;
     margin-bottom: 10px;
 }
@@ -99,4 +99,29 @@
 
 #MyProfile_body > button:hover {
     transform: scale(1.02);
+}
+
+@media (max-width: 800px) {
+    .MyProfile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    #MyProfile_image {
+        width: 200px;
+        height: 200px;
+        margin-right: 50px;
+    }    
+    
+    .MyProfile_image_btn {
+        top: 88%;
+    }
+    
+    #MyProfile_body > div {
+        margin-top: 0;
+        width: 250px;
+    }
 }
