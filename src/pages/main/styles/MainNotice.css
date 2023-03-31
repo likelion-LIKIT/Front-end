@@ -57,11 +57,11 @@
 }
 
 .notice_gradient_top {
-    top: 83px;
+    top: 82px;
 }
 
 .notice_gradient_bottom {
-    bottom: 30px;
+    bottom: 46px;
 }
 
 #notice_body::-webkit-scrollbar {
@@ -116,5 +116,13 @@
 
     .notice_gradient_top, .notice_gradient_bottom {
         height: 60px;
+    }
+
+    .notice_gradient_top {
+        top: 82px;
+    }
+    
+    .notice_gradient_bottom {
+        bottom: 29px;
     }
 }
