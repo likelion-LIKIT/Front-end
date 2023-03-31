@@ -14,35 +14,7 @@ const MyAPI = {
       likelion_email: "ghw9174@gmail.com",
       profile_image: "",
       description: "안녕하세요 10기 운영진 구현우입니다.",
-      tech_stack: [
-        "HTML",
-        "CSS",
-        "REACT",
-        "JAVASCRIPT",
-        "PYTHON",
-        "DJANGO",
-        "JAVA",
-        "TYPESCRIPT",
-        "SPRING",
-        "C",
-        "CPP",
-        "SQL",
-        "MYSQL",
-        "DOCKER",
-        "AWS",
-        "CSHARP",
-        "SPRINGBOOT",
-        "VUE",
-        "GO",
-        "FLASK",
-        "SVELTE",
-        "NEXTJS",
-        "FIGMA",
-        "GIT",
-        "SWIFT",
-        "KOTLIN",
-        "KUBERNETES",
-      ],
+      tech_stack: ["HTML", "CSS", "REACT", "JAVASCRIPT"],
       projects: [
         { project_id: "1", project_logo: "" },
         { project_id: "2", project_logo: "" },
@@ -50,8 +22,9 @@ const MyAPI = {
     };
   },
 
-  updateUserInfo(key, value) {
+  updateUserInfo(key, value, setUserInfo, userInfo) {
     // 유저 정보 수정 로직 필요
+    // 기존 데이터도 수정하는 로직 필요
   },
 };
 

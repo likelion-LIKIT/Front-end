@@ -1,14 +1,11 @@
 // 작성자: 구현우
 
 import MyUtils from "../utils/MyUtils";
-import MyPasswordModal from "./MyPasswordModal";
 import "../styles/MyProfile.css";
 
 import { useRef, useState } from "react";
 
-const MyProfile = ({ isMe, setUserInfo, userInfo }) => {
-  const [passwordModal, setPasswordModal] = useState(false);
-
+const MyProfile = ({ isMe, setUserInfo, userInfo, setPasswordModal }) => {
   const selectImage = useRef("");
 
   const handleFileUpload = (e) => {
@@ -75,13 +72,6 @@ const MyProfile = ({ isMe, setUserInfo, userInfo }) => {
         <div>{userInfo.likelion_email}</div>
         {isMe && <button onClick={() => setPasswordModal(true)}>비밀번호 변경</button>}
       </div>
-
-      <MyPasswordModal
-        show={passwordModal}
-        onHide={() => setPasswordModal(passwordModal && !passwordModal)}
-        width={"500px"}
-        height={"500px"}
-      />
     </div>
   );
 };
