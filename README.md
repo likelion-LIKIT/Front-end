@@ -3,7 +3,7 @@
   <img src="https://user-images.githubusercontent.com/88186460/231506830-f44405d8-3db1-4bad-bbf6-9787faad4161.png" alt='프로젝트 로고' width='900px'>
   <br>
   <p align='right'>
-    <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://github.com/GHWooo/LIKIT-Frontend&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a>
+    <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://github.com/likelion-LIKIT/Front-end&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a>
   </p>
 </p>
 
