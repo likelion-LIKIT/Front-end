@@ -97,7 +97,7 @@
 
 ### 설치
 ```
-$ git clone https://github.com/LIKIT-Frontend.git
+$ git clone https://github.com/likelion-LIKIT/Front-end
 $ cd LIKIT-Frontend
 ```
 
